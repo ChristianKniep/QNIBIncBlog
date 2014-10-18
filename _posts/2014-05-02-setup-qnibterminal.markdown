@@ -2,7 +2,8 @@
 layout: post
 title:  "Setup a basic QNIBTerminal"
 date:   2014-05-02
-categories: qnibterminal eng cluster docker osdc isc
+categories: qnibterminal
+tags: blog eng cluster docker osdc isc
 ---
 
 ![container](/pics/2014-05-01/dock_container.png "dock")

@@ -1,8 +1,9 @@
 <header class="site-header">
 
   <div class="wrap">
-
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    
+    <!-- <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a> -->
+    <a class="site-title" href="{{ site.baseurl }}/"><img src="/pics/second_strike_trans.png" height="56px" /></a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -17,10 +18,31 @@
         </svg>
       </a>
       <div class="trigger">
-        {% for page in site.pages %}
+        {% assign sorted_pages = site.pages | sort:"name" %}
+        {% for page in sorted_pages %}
           {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
         {% endfor %}
       </div>
+    <div class='limiter'>
+      <div class='header clearfix'>
+        <div class='dropdown-menu'>
+        {% for item in site.languages %}
+          {% if page.lang == item.key %}
+            <a href='#' class='button dropdown-hover'><span class='icon down'></span>{{item.name}}</a>
+          {% endif %}
+        {% endfor %}
+        <ul class='dropdown'>
+          {% for i in site.languages %}
+            {% for post in site.posts %}
+              {% if {{page.date}} == {{post.date}} and {{post.lang}} == {{i.key}} %}
+                <li><a href='{{site.baseurl}}{{post.url}}' {% if page.lang == i.key %}class='active'{% endif %}>{{i.name}}</a></li>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      </div>
+      <a href='{{site.baseurl}}/{{page.lang}}/' class='home'>{{page.translations.[page.lang].home-link}}</a>
+    </div>
     </nav>
 
   </div>

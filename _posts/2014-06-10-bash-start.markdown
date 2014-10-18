@@ -2,7 +2,9 @@
 layout: post
 title:  "Quick Start using bash"
 date:   2014-06-10
-categories: qnibterminal eng cluster docker isc
+author: Christian
+categories: qnibterminal
+tags: blog eng cluster docker isc
 ---
 
 Yesterday I pimped the way to build the cluster; now it is time to start the beast.

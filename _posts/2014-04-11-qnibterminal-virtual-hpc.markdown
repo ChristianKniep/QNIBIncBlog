@@ -2,7 +2,8 @@
 layout: post
 title:  "OSDC2014 my way to QNIBTerminal - Virtual HPC"
 date:   2014-04-11 10:27:36
-categories: qnibterminal eng cluster docker osdc
+categories: qnibterminal 
+tags: qnibterminal eng cluster docker osdc blog
 ---
 
 On my way home (at least to an intermediate stop at my mothers) from the

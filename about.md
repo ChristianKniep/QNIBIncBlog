@@ -4,8 +4,27 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+### ... QNIB Inc
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+QNIB Inc derives from the first project Christian did during his B.Sc. report, a InfiniBand monitoring suite.
+For the sake of the report is was named 'OpenIBPM: Open Source InfiniBand Performance Monitoring'. Afterwards
+Christian renamed it to match his last name (Kniep): 'QNIB: Qualified Networking with InfiniBand'.
+Since then QNIB was a pet project's branding...
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+### ... Christian Kniep (CxO / Founder)
+<div id="portrait">
+    <img height="100" src="/pics/Christian.png">
+</div>
+
+Christian passion is to improve the ease of use of those stubborn machines we call IT equipment.
+
+He started at the dawn of the Euro (2002) as an generic System Administrator, installing desktop
+and server systems running MacOS (9/X), Windows and Linux.
+Since then Christian iterated through support positions, mostly in an automotive R&D context.
+He maintained end user applications, virtual reality systems (functional/esthetic),
+in-house infrastructure and shifted towards HPC cluster environments.
+At the latest non-R&D position Christian was in charge of an InfiniBand network with a couple of thousand nodes.
+
+In 2013 he moved to Paris to work as an R&D Engineer in the HPC section of Bull SAS. His job (and passion) was
+to help shaping a Log and Performance Mangement solution that will withstand the node increasement introduced bt the next generation of
+supercomputers. At the end of 2014 Christian moved back to Germany to persue his passions in a more unconstrained fashion.

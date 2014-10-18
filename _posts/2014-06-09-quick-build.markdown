@@ -2,7 +2,9 @@
 layout: post
 title:  "Quick Build of QNIBTerminal"
 date:   2014-06-09
-categories: qnibterminal eng cluster docker isc
+categories: qnibterminal
+tags: blog eng cluster docker isc
+description: How to fetch, build and run the docker containers of QNIBTerminal
 ---
 
 [Last time][last_post] I gave a walkthrough to the docker cluster.
