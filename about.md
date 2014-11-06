@@ -4,14 +4,14 @@ title: About
 permalink: /about/
 ---
 
-### ... QNIB Inc
+### ... QNIB Solutions
 
-QNIB Inc derives from the first project Christian did during his B.Sc. report, a InfiniBand monitoring suite.
+QNIB Solutions (early on called 'QNIB Inc') derives from the first project Christian did during his B.Sc. report, a InfiniBand monitoring suite.
 For the sake of the report is was named 'OpenIBPM: Open Source InfiniBand Performance Monitoring'. Afterwards
 Christian renamed it to match his last name (Kniep): 'QNIB: Qualified Networking with InfiniBand'.
-Since then QNIB was a pet project's branding...
+Since then QNIB becomes a pet project's theme...
 
-### ... Christian Kniep (CxO / Founder)
+### ... Christian Kniep
 <div id="portrait">
     <img height="100" src="/pics/Christian.png">
 </div>
