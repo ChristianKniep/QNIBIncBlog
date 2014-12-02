@@ -17,7 +17,9 @@ oversubscribed node. Running real workloads was not my intention...
 
 Long story short: 'Challange accepted' was what I was thinking.
 
-<b>TL;DR</b> An interview with Rich of insideHPC should be posted here.
+<b>TL;DR</b> An interview with Rich of insideHPC was recorded as an aftermath ([click here]({% post_url 2014-12-02-Containerized-MPI-workloads-Interview %})).
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/41140387" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/QnibSolutions/2014-1105-hpcackniepchristiandockermpi" title="2014 11-05 hpcac-kniep_christian_dockermpi" target="_blank">2014 11-05 hpcac-kniep_christian_dockermpi</a> </strong> from <strong><a href="//www.slideshare.net/QnibSolutions" target="_blank">QnibSolutions</a></strong> </div>
 
 I got myself access to a small 8 node cluster under the hood of the 'HPC Advisory Council' and started to deploy containers.
 To make it more convenient I used the SLURM resource scheduler. Thus, I am able to submit the benchmarks to the group of nodes and SLURM
@@ -58,6 +60,52 @@ Comparing CentOS 7 on bare-metal and within a container the performance is quite
 By comparing Open MPI >=1.6.4 the performance is also what everyone would expect. But how about the 1.5.4 performance?
 Ubuntu12 is outperforming the native host.
 
+#### OSU MPI Micro Benchmark
+
+To check against other evaluations the [OSU MPI Benchmark][osumpi] is used. 
+
+{% highlight bash %}
+$ mpirun -np 2 -H venus001,venus002 $(pwd)/osu_alltoall
+# OSU MPI All-to-All Personalized Exchange Latency Test v4.4.1
+# Size       Avg Latency(us)
+1                       1.83
+2                       1.82
+4                       1.74
+8                       1.63
+16                      1.62
+32                      1.68
+...
+{% endhighlight %}
+
+The distributions Open MPI version shows simmilar performance among the RHEL derivates and ubuntu struggeling.<br>
+<img width="700" src="/pics/2014-11-06/mpi_benchmark_results_distr_only.png">
+
+To compare the mpi versions I build an average over the 2digit msg size, since they are in the same ball-park anyway.
+I am using an ugly bash hack, current position is the Moscovien Airport and it's late:
+{% highlight bash %}
+$ cat avg_2dig.sh
+function doavg {
+   echo "scale=2;($(echo $*|sed -e 's/ /+/g'))/$#"|bc
+}
+
+function avg2dig() {
+    val=$(cat $1|egrep "^[0-9][0-9]?\s+[0-9\.]+$"|awk '{print $2}'|xargs)
+    if [ "X${val}" != "X" ];then
+        doavg  ${val}
+    fi
+}
+$ for x in $(find job_results/mpi/ -name osu_alltoall.out|xargs);do echo -n "$x -> ";avg2dig $x;done|grep 1.8.3
+job_results/mpi/venus/omp-1.8.3/2014-11-06_22-03-59/osu_alltoall.out -> 1.46
+job_results/mpi/centos/7/omp-1.8.3/2014-11-06_22-05-33/osu_alltoall.out -> 1.41
+job_results/mpi/centos/6/omp-1.8.3/2014-11-06_22-05-45/osu_alltoall.out -> 1.43
+job_results/mpi/ubuntu/12/omp-1.8.3/2014-11-06_22-07-02/osu_alltoall.out -> 1.42
+{% endhighlight %}
+
+
+Doing so the result is shown below.<br>
+<img width="700" src="/pics/2014-11-06/mpi_benchmark_results.png">
+
+
 #### Future Work
 
 ##### Different native installation
@@ -72,9 +120,9 @@ That would imply that the performance of the kernel used in Ubuntu12 is similar 
 If I use the current setup the performance is going to plunge if two containers are concurrently using the IB hardware.
 The reason for that should be found in the concurrent DMA access from all of them, without knowing what they are doing.
 
-SV-IOR should come to the rescue here, by providing different DMA domains via distinct virtual devices. When activated a kernel parameter
+SV-IOR should come to the rescue here, by providing different DMA domains via distinct virtual devices. When activated, a kernel parameter
 is given to state how many devices should be created. Instead of having only one IB device there are many. The network adapter will take care of the
-multiplexing. I would expect that with that two partitions could run a benchmark concurrently without much penalty.
+'multiplexing'. The promise is going to be that two partitions could run a benchmark concurrently without much penalty.
 
 ##### Security evaluation
 
@@ -101,3 +149,4 @@ The bare-metal installation could be bleeding edge to provide the latest and gre
 the customized containers.
 
 
+[osumpi]: http://mvapich.cse.ohio-state.edu/benchmarks/
