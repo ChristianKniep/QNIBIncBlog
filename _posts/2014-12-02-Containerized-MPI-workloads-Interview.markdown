@@ -21,9 +21,9 @@ A little remark I would like to point out regarding the slide about using an Inf
 
 Let's say that this view might be a little bit outdated. This sure was they way to do it to provide performance in the old days.
 Within the dark ages there was no way to squeeze performance out. DMA was done by the first virtual machine and everyone had to pick up the
-memory bits. I saw a nice visualization within a youtube video about SR-IOV:
+memory bits. I saw a nice visualization within a youtube video about SR-IOV (in an Ethernet context):
 
-XXXXX Insert YT-Link here
+<iframe width="420" height="315" src="//www.youtube.com/embed/hRHsk8Nycdg" frameborder="0" allowfullscreen></iframe>
 
 Today we got paravirtualization up to SR-IOV and that is why I am looking forward to play around with this technique in the days to come.
 
