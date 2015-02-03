@@ -2,7 +2,7 @@
 layout: post
 title:  "Update to the ELK/Graphite stack"
 subtitle: "InfluxDB and Grafana for the win!"
-d/ate:   2015-01-15
+date:   2015-01-15
 tags: eng docker blog qnibterminal
 ---
 
