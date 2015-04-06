@@ -7,7 +7,7 @@ categories: qnibterminal
 tags: qnibterminal eng cluster docker blog talk
 ---
 
-As an aftermath of the ['HPC Advisory Council China Workshop']({% post_url 2014-11-06-Containerized-MPI-workloads %})
+As an aftermath of the ['HPC Advisory Council China Workshop']().
 Rich invited me to have an interview via Skype about the very same topic.
 
 Apart from the fact that it's always a pleasure to talk to HPC enthusasts like Rich, it was a perfect oportunity to record the slides,

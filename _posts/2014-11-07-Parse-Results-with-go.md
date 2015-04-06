@@ -8,7 +8,7 @@ tags: golang blog
 
 Oh boy, I realy need to get out of the Moscovian airport, 15 hours is enough. But...
 
-...at least it gave me some time to spare. After adding some MPI Benchmark results to my [recent write-up]({% post_url 2014-11-06-Containerized-MPI-workloads %}})
+...at least it gave me some time to spare. After adding some MPI Benchmark results to my [recent write-up]().
 about my talk at HPC Advisory council I assume we all agree that the uglyness of my bash solution is endless.
 Please cover your eyes, here we go one more time:
 

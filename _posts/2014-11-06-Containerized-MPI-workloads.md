@@ -17,7 +17,7 @@ oversubscribed node. Running real workloads was not my intention...
 
 Long story short: 'Challange accepted' was what I was thinking.
 
-<b>TL;DR</b> An interview with Rich of insideHPC was recorded as an aftermath ([click here]({% post_url 2014-12-02-Containerized-MPI-workloads-Interview %})).
+<b>TL;DR</b> An interview with Rich of insideHPC was recorded as an aftermath.
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/41140387" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/QnibSolutions/2014-1105-hpcackniepchristiandockermpi" title="2014 11-05 hpcac-kniep_christian_dockermpi" target="_blank">2014 11-05 hpcac-kniep_christian_dockermpi</a> </strong> from <strong><a href="//www.slideshare.net/QnibSolutions" target="_blank">QnibSolutions</a></strong> </div>
 
