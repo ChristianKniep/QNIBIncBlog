@@ -26,5 +26,5 @@ in-house infrastructure and shifted towards HPC cluster environments.
 At the latest non-R&D position Christian was in charge of an InfiniBand network with a couple of thousand nodes.
 
 In 2013 he moved to Paris to work as an R&D Engineer in the HPC section of Bull SAS. His job (and passion) was
-to help shaping a Log and Performance Mangement solution that will withstand the node increasement introduced bt the next generation of
+to help shaping a Log and Performance Mangement solution that will withstand the node increasement introduced by the next generation of
 supercomputers. At the end of 2014 Christian moved back to Germany to persue his passions in a more unconstrained fashion.
