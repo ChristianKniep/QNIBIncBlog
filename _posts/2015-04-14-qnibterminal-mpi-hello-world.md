@@ -6,19 +6,19 @@ date: 2015-04-14
 tags: eng docker blog 
 ---
 
-Since I was asked (thanks Dmitry) via mail how to setup QNIBTerminal to run MPI jobs, I created a [REAMDE](https://github.com/ChristianKniep/docker-compute/blob/master/README.md) within the `qnib/compute` repository, but why not put it in a blog post.
+Since I was asked (thanks Dmitry) via mail how to setup QNIBTerminal to run MPI jobs, I created a [REAMDE](https://github.com/ChristianKniep/docker-compute/blob/master/README.md) within the `qnib/compute` repository, but why not put it in a blog post (README.md is Markdown, my blog is Markdown...)?
 
-### MPI HelloWorld
+## MPI HelloWorld
 
 To fire up a small mpi script one needs
 
 - consul to bound tem all together (DNS wise and in regards of the slurm.conf)
 - slurmctld as master
-- at least to slurmd to have a cluster (otherwise it would be only one :)
+- at least two slurmd daemons to have a cluster (otherwise it would be only one :)
 
-##### fig
+### fig
 
-The fig file within this directory holds exactly this.
+The fig file within the [repository](https://github.com/ChristianKniep/docker-compute/) holds exactly this.
 
 {% highlight bash %}
 consul:
