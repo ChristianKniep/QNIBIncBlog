@@ -2,7 +2,7 @@
 author: Christian Kniep
 layout: post
 title: "SLURM cluster with auto generated Dashboards"
-date: 2015-05-13
+date: 2015-05-26
 tags: eng docker blog slurm qnibterminal
 ---
 
