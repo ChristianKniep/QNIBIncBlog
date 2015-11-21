@@ -97,3 +97,35 @@ ec68ec21a55f        none                null
 {% endhighlight %}
 
 As we can see, the local networks `none`, `host` and `bridge` have different IDs, whereas the `global` one has the same. 
+
+## Run containers
+
+Start `u0` on the first machine.
+
+{% highlight bash %}
+mh0 $ docker run -ti --net=global --name=u0 --hostname=u0  ubuntu  bash
+root@u0:/# ip -o -4 addr
+1: lo    inet 127.0.0.1/8 scope host lo\       valid_lft forever preferred_lft forever
+13: eth0    inet 10.0.0.2/24 scope global eth0\       valid_lft forever preferred_lft forever
+15: eth1    inet 172.18.0.2/16 scope global eth1\       valid_lft forever preferred_lft forever
+root@u0:/#
+{% endhighlight %}
+
+`u1` on the second.
+
+{% highlight bash %}
+mh1 $ docker run -ti --net=global --name=u1 --hostname=u1 ubuntu  bash
+root@u1:/# ip -o -4 addr
+1: lo    inet 127.0.0.1/8 scope host lo\       valid_lft forever preferred_lft forever
+7: eth0    inet 10.0.0.3/24 scope global eth0\       valid_lft forever preferred_lft forever
+10: eth1    inet 172.18.0.2/16 scope global eth1\       valid_lft forever preferred_lft forever
+root@u1:/#
+{% endhighlight %}
+
+Now we can ping the IP of `u0` from `u1`:
+
+{% highlight bash %}
+root@u1:/# ping -c1 10.0.0.2 | grep trans
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+root@u1:/#
+{% endhighlight %}
