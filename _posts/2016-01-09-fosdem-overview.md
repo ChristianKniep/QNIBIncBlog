@@ -10,7 +10,7 @@ Happy new year, y'all!
 
 To kick of 2016 I am going to contribute to FOSDEM by talking about a [Multi-host containerised HPC cluster](https://fosdem.org/2016/schedule/event/hpc_bigdata_hpc_cluster/). And since the [HPC Advisory Council](http://www.hpcadvisorycouncil.com/) was so nice to provide an actual [HPC resource](http://www.hpcadvisorycouncil.com/cluster_center.php) I will present a 2.0 version of the talk (lessons learned after FOSDEM) at the [HPC Advisory Council Workshop](http://www.hpcadvisorycouncil.com/events/2016/stanford-workshop/agenda.php) in Stanford.
 
-The talks are limited in time (25min / 45min), therefore I thought it would be nice to provide some information in a series of blog posts. This one should set the scene a bit. Subsequent posts focus on how everything was setup (spoiler: ansible), the way I monitor it (Sensu on an external server), how the docker networking performs and so on. We'll see what pops into my head. :)
+The talks are limited in time (20min +5min Q&A / 45min), therefore I thought it would be nice to provide some information in a series of blog posts. This one should set the scene a bit. Subsequent posts focus on how everything was setup (spoiler: ansible), the way I monitor it (Sensu on an external server), how the docker networking performs and so on. We'll see what pops into my head. :)
 
 All the code is going to be released on github; in fact it's already there, but I use an external cluster with RabbitMQ credentials. Have to sanitise it first... 
 
