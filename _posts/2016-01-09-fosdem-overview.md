@@ -3,12 +3,27 @@ author: Christian Kniep
 layout: post
 title: "FOSDEM #1 - HPC in a box"
 date: 2016-01-09
-tags: eng docker blog 
+tags: eng docker blog fosdem
 ---
 
 Happy new year, y'all! 
 
 To kick of 2016 I am going to contribute to FOSDEM by talking about a [Multi-host containerised HPC cluster](https://fosdem.org/2016/schedule/event/hpc_bigdata_hpc_cluster/). And since the [HPC Advisory Council](http://www.hpcadvisorycouncil.com/) was so nice to provide an actual [HPC resource](http://www.hpcadvisorycouncil.com/cluster_center.php) I will present a 2.0 version of the talk (lessons learned after FOSDEM) at the [HPC Advisory Council Workshop](http://www.hpcadvisorycouncil.com/events/2016/stanford-workshop/agenda.php) in Stanford.
+
+The blog post are listed here:
+
+<ul class="posts">
+{% for post in site.posts %}
+  {% if post.tags contains 'fosdem' %}
+      <div class="post_info">
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <span>({{ post.date | date:"%Y-%m-%d" }})</span>
+        </li>
+      </div>
+  {% endif %}
+{% endfor %}
+</ul>
 
 The talks are limited in time (20min +5min Q&A / 45min), therefore I thought it would be nice to provide some information in a series of blog posts. This one should set the scene a bit. Subsequent posts focus on how everything was setup (spoiler: ansible), the way I monitor it (Sensu on an external server), how the docker networking performs and so on. We'll see what pops into my head. :)
 
