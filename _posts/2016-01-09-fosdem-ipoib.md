@@ -147,6 +147,10 @@ TCP window size:  790 KByte (default)
 [root@venus008 ~]#
 {% endhighlight %}
 
+Now I'll wait... 
+
+![](/pics/2016-01-09/tweet_vxlan_re.png)
+
 
 ## IPoIB - First strike!
 
