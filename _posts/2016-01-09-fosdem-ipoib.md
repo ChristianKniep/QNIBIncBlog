@@ -25,13 +25,27 @@ This post is one out of a series of blog post in the advent of [FOSDEM 2016](htt
 
 ## TL;DR
 
+### VXLAN
+
 InfiniBand as a backend for Docker Networking seems to be not beneficial (yet), since the overlay driver uses VXLAN, which encapsulates the IP traffic once more (as pointed out [here](http://keepingitclassless.net/2014/03/mtu-considerations-vxlan/)). Thus (IMHO) degenerate the performance as the Kernel is involved within VXLAN and IPoIB encapsulation.
 
 It might happen that my kernel is not the greatest and latest in terms of VXLAN (`3.10.0-327` on CentOS7.2).
 
 At the bottom of the post I discuss what I have tackled in terms of VXLAN performance - without much success. :(
 
-## IPoIB - First strike!
+### MACLAN
+
+A new docker-plugin for libnetwork, for know it does not cope with the IPoIB interface and it's only single host anyway.
+
+### pipework
+
+Plumbing would allow to attach an additional network bridge per container, but that's cheating. :)
+
+### Conclusion
+
+So far, we have to wait for better days - if a cluster wide networking is the goal.
+
+## Idea
 
 As we saw in the baseline benchmark section of the first post, IP Traffic over InfiniBand (IPoIB) is quite fast.
 
@@ -44,6 +58,124 @@ $ iperf -c 10.0.0.181 -d -t 120
 $
 {% endhighlight %}
 
+
+## Attempts
+
+I tried multiple approaches, all of which do have some caveats.
+
+### Good old `pipework`
+
+I could go back to `pipework` created by Jerome back in the days.
+
+{% highlight bash %}
+[root@venus007 binaries]# docker run -ti --net=none --name=container7 192.168.12.11:5000/qnib/ib-bench:cos7 bash
+[root@780c2c8af385 /]# ip -o -4 addr
+1: lo    inet 127.0.0.1/8 scope host lo\       valid_lft forever preferred_lft forever
+[root@780c2c8af385 /]#
+{% endhighlight %}
+
+Then I attach a network interface...
+
+{% highlight bash %}
+[root@venus007 ~]# /scratch/pipework ib0 container7 10.0.0.207/24
+[root@venus007 ~]#
+{% endhighlight %}
+
+Et voila...  `iperf` showed reasonable performance in combination with the physical host `venus008`.
+
+{% highlight bash %}
+[root@780c2c8af385 /]# ip -o -4 addr
+1: lo    inet 127.0.0.1/8 scope host lo\       valid_lft forever preferred_lft forever
+148: ib0    inet 10.0.0.207/24 brd 10.0.0.255 scope global ib0\       valid_lft forever preferred_lft forever
+[root@780c2c8af385 /]# iperf -c 10.0.0.188 -d -t 120
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+------------------------------------------------------------
+Client connecting to 10.0.0.188, TCP port 5001
+TCP window size: 1.95 MByte (default)
+------------------------------------------------------------
+[  5] local 10.0.0.207 port 40961 connected with 10.0.0.188 port 5001
+[  4] local 10.0.0.207 port 5001 connected with 10.0.0.188 port 34306
+[ ID] Interval       Transfer     Bandwidth
+[  5]  0.0-120.0 sec   111 GBytes  7.93 Gbits/sec
+[  4]  0.0-120.0 sec  77.4 GBytes  5.54 Gbits/sec
+{% endhighlight %}
+
+**But**: This is cheating, since it does not use docker networking. I did this kind of stuff month ago in conjunction with `docker-spotter`. What I want is a transparent networking option throughout the docker cluster.
+
+### macvlan-docker-plugin?
+
+There is a docker-plugin out there, which uses macvlan instead of vxlan. It might get around the additional encapsulation, but for know it seems to be single-host only.
+
+![](/pics/2016-01-09/tweet_macvlan.png)
+
+{% highlight bash %}
+[root@venus008 ~]# modprobe macvlan
+[root@venus008 ~]# lsmod | grep macvlan
+macvlan                19233  0
+[root@venus008 ~]# git clone https://github.com/gopher-net/macvlan-docker-plugin.git
+Cloning into 'macvlan-docker-plugin'...
+remote: Counting objects: 331, done.
+remote: Total 331 (delta 0), reused 0 (delta 0), pack-reused 331
+Receiving objects: 100% (331/331), 8.86 MiB | 2.52 MiB/s, done.
+Resolving deltas: 100% (81/81), done.
+[root@venus008 ~]# cd macvlan-docker-plugin/binaries/
+[root@venus008 binaries]# ./macvlan-docker-plugin-0.2-Linux-x86_64 -d --host-interface=ib0 --mode=bridge
+DEBU[0000] The plugin absolute path and handle is [ /run/docker/plugins/macvlan.sock ]
+INFO[0000] Plugin configuration options are:
+  container subnet: [192.168.1.0/24],
+  container gateway: [192.168.1.1],
+  host interface: [ib0],
+  mmtu: [1500],
+  macvlan mode: [bridge]
+INFO[0000] Macvlan network driver initialized successfully
+{% endhighlight %}
+
+The MTU is fixed but could easily be adjusted in the code. I can even create a network in the address room of the physical network
+
+{% highlight bash %}
+[root@venus007 ~]# docker network create -d macvlan --subnet=10.0.0.0/24 --gateway=10.0.0.254 -o host_iface=ib0 ib
+00a7164d9d74c62010d62636f2828e5fc9f58c9e57d52e62c5899f5b72fcd852
+[root@venus007 ~]# docker network ls
+NETWORK ID          NAME                DRIVER
+279aa8f2465c        global              overlay
+37abdbb380b2        docker_gwbridge     bridge
+4903d1516e18        none                null
+6342ca80a88a        host                host
+00a7164d9d74        ib                  macvlan
+0a0b040f1eab        bridge              bridge
+[root@venus007 ~]#
+{% endhighlight %}
+
+But unfortunately I get an error when attaching to it... :(
+
+{% highlight bash %}
+[root@venus007 ~]# docker run -ti --net=ib 192.168.12.11:5000/qnib/ib-bench:cos7 bash
+Error response from daemon: Cannot start container 248ce6ef138dde20ecadde2424cc010433432ff68a728b7fbff3e4ae4376bd02: EOF
+[root@venus007 ~]#
+{% endhighlight %}
+
+The plugin daemon throws:
+
+{% highlight bash %}
+DEBU[0148] The container subnet for this context is [ 10.0.0.1/24 ]
+INFO[0148] Allocated container IP: [ 10.0.0.1/24 ]
+DEBU[0148] Create endpoint response: &{Interface:{Address: AddressIPv6: MacAddress:7a:42:00:00:00:00}}
+DEBU[0148] Create endpoint fe070f3c229f549376c7a3c8eaf3d5347ba811a1a850f686b223fbe41f8ce8c3 &{Interface:{Address: AddressIPv6: MacAddress:7a:42:00:00:00:00}}
+DEBU[0148] Join request: NetworkID:00a7164d9d74c62010d62636f2828e5fc9f58c9e57d52e62c5899f5b72fcd852 EndpointID:fe070f3c229f549376c7a3c8eaf3d5347ba811a1a850f686b223fbe41f8ce8c3 SandboxKey:/var/run/docker/netns/604808cb6bb6 Options:map[]
+ERRO[0148] failed to create Macvlan: [ 0 0 0 fe070  0 25 0 <nil>} ] with the error: invalid argument
+ERRO[0148] Ensure there are no existing [ ipvlan ] type links and remove with 'ip link del <link_name>', also check /var/run/docker/netns/ for orphaned links to unmount and delete, then restart the plugin
+DEBU[0148] Delete endpoint request: NetworkID:00a7164d9d74c62010d62636f2828e5fc9f58c9e57d52e62c5899f5b72fcd852 EndpointID:fe070f3c229f549376c7a3c8eaf3d5347ba811a1a850f686b223fbe41f8ce8c3
+DEBU[0148] Delete endpoint fe070f3c229f549376c7a3c8eaf3d5347ba811a1a850f686b223fbe41f8ce8c3
+DEBU[0148] The requested interface to delete [ fe070 ] was not found on the host: route ip+net: no such network interface
+ERRO[0148] The requested interface to delete [ fe070 ] was not found on the host.
+{% endhighlight %}
+
+
+### VXLAN (my first approach actually)
+
 And as we also learned last time around, the advertised interface of Docker Networking has to be specified within the docker config
 (DISCLAIMER: That might not be exactly right - not sure about it [yet]).
 
@@ -53,7 +185,7 @@ OPTIONS="-H tcp://0.0.0.0:2376 --cluster-store=consul://127.0.0.1:8500/network -
 [root@venus001 jobs]#
 {% endhighlight %}
 
-### IPoIB as backend network
+#### IPoIB as backend network
 
 So how about we use the `ib0` device?
 
@@ -118,51 +250,13 @@ TCP window size: 99.0 KByte (default)
 [root@hpcg1 /]#
 {% endhighlight %}
 
-### Latency
-
-The latency with IPoIB:
-
-{% highlight bash %}
-[root@hpcg1 /]# ping -c5 hpcg3
-PING hpcg3 (10.0.0.3) 56(84) bytes of data.
-64 bytes from hpcg3 (10.0.0.3): icmp_seq=1 ttl=64 time=0.190 ms
-64 bytes from hpcg3 (10.0.0.3): icmp_seq=2 ttl=64 time=0.250 ms
-64 bytes from hpcg3 (10.0.0.3): icmp_seq=3 ttl=64 time=0.083 ms
-64 bytes from hpcg3 (10.0.0.3): icmp_seq=4 ttl=64 time=0.088 ms
-64 bytes from hpcg3 (10.0.0.3): icmp_seq=5 ttl=64 time=0.122 ms
-
---- hpcg3 ping statistics ---
-5 packets transmitted, 5 received, 0% packet loss, time 3999ms
-rtt min/avg/max/mdev = 0.083/0.146/0.250/0.065 ms
-[root@hpcg1 /]#
-{% endhighlight %}
-
-When I go back to the ethernet device:
-
-{% highlight bash %}
-[root@hpcg1 /]#  ping -c5 hpcg3
-PING hpcg3 (10.0.0.4) 56(84) bytes of data.
-64 bytes from hpcg3 (10.0.0.4): icmp_seq=1 ttl=64 time=0.348 ms
-64 bytes from hpcg3 (10.0.0.4): icmp_seq=2 ttl=64 time=0.240 ms
-64 bytes from hpcg3 (10.0.0.4): icmp_seq=3 ttl=64 time=0.204 ms
-64 bytes from hpcg3 (10.0.0.4): icmp_seq=4 ttl=64 time=0.311 ms
-64 bytes from hpcg3 (10.0.0.4): icmp_seq=5 ttl=64 time=0.224 ms
-
---- hpcg3 ping statistics ---
-5 packets transmitted, 5 received, 0% packet loss, time 3999ms
-rtt min/avg/max/mdev = 0.204/0.265/0.348/0.056 ms
-[root@hpcg1 /]#
-{% endhighlight %}
-
-Lower ping, but as said... I would have expected more. :(
-
-## Discussion about VXLAN
+### Discussion about VXLAN
 
 I reached out via twitter and was asked to check the raw performance of VXLAN ([slides](http://de.slideshare.net/naotomatsumoto/a-first-look-at-xvlan-over-infiniband-network-on-linux-37rc7)).
 
 ![](/pics/2016-01-09/tweet_vxlan.png)
 
-### Kernel Options
+#### Kernel Options
 
 The kernel config should be alright:
 
@@ -177,7 +271,7 @@ CONFIG_MLX4_EN_VXLAN=y
 # CONFIG_QLCNIC_VXLAN is not set
 {% endhighlight %}
 
-### Setup IPoIB plus VXLAN
+#### Setup IPoIB plus VXLAN
 
 Setup a route for ib0.
 
@@ -237,7 +331,7 @@ Use 'dstport 0' to get default and quiet this message
 [root@venus008 ~]# iperf -s
 {% endhighlight %}
 
-### Benchmark once more
+#### Benchmark once more
 
 And benchmark the vxlan.
 
@@ -279,7 +373,7 @@ TCP window size:  790 KByte (default)
 [root@venus008 ~]#
 {% endhighlight %}
 
-Now I'll wait... 
+Then I reached out again...
 
 ![](/pics/2016-01-09/tweet_vxlan_re.png)
 
