@@ -23,134 +23,13 @@ This post is one out of a series of blog post in the advent of [FOSDEM 2016](htt
 {% endfor %}
 </ul>
 
-## DISCLAIMER: Understanding-In-Progress
+## TL;DR
 
-As I wrote at the end, the network should be much faster...
-If I figure out what's wrong, I will add a 'Second Strike'. :)
+InfiniBand as a backend for Docker Networking seems to be not beneficial (yet), since the overlay driver uses VXLAN, which encapsulates the IP traffic once more (as pointed out [here](http://keepingitclassless.net/2014/03/mtu-considerations-vxlan/)). Thus (IMHO) degenerate the performance as the Kernel is involved within VXLAN and IPoIB encapsulation.
 
-## IPoIB - Second strike! VXLAN raw performance
+It might happen that my kernel is not the greatest and latest in terms of VXLAN (`3.10.0-327` on CentOS7.2).
 
-I reached out via twitter and was asked to check the raw performance of VXLAN ([slides](http://de.slideshare.net/naotomatsumoto/a-first-look-at-xvlan-over-infiniband-network-on-linux-37rc7)).
-
-![](/pics/2016-01-09/tweet_vxlan.png)
-
-### Check VXLAN
-
-The kernel config should be alright:
-
-{% highlight bash %}
-[root@venus007 ~]# grep VXLAN /boot/config-3.10.0-327.3.1.el7.x86_64
-CONFIG_OPENVSWITCH_VXLAN=m
-CONFIG_VXLAN=m
-CONFIG_BE2NET_VXLAN=y
-CONFIG_I40E_VXLAN=y
-CONFIG_FM10K_VXLAN=y
-CONFIG_MLX4_EN_VXLAN=y
-# CONFIG_QLCNIC_VXLAN is not set
-{% endhighlight %}
-
-Setup a route for ib0.
-
-{% highlight bash %}
-[root@venus007 ~]# ip route add 224.0.0.0/4 dev ib0
-[root@venus007 ~]# route -n
-Kernel IP routing table
-Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
-0.0.0.0         192.168.12.101  0.0.0.0         UG    100    0        0 enp4s0f0
-10.0.0.0        0.0.0.0         255.255.255.0   U     150    0        0 ib0
-172.17.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker0
-172.18.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker_gwbridge
-192.168.12.0    0.0.0.0         255.255.255.0   U     100    0        0 enp4s0f0
-224.0.0.0       0.0.0.0         240.0.0.0       U     0      0        0 ib0
-[root@venus007 ~]#
-
-{% endhighlight %}
-
-Now I mimic what was done in the slides - may the force be with me... :)
-
-{% highlight bash %}
-[root@venus007 ~]# ip link add vxlan99 type vxlan id 5001 group 239.0.0.99 ttl 10 dev ib0
-vxlan: destination port not specified
-Will use Linux kernel default (non-standard value)
-Use 'dstport 4789' to get the IANA assigned value
-Use 'dstport 0' to get default and quiet this message
-[root@venus007 ~]# ip link set up dev ib1
-[root@venus007 ~]# ip link add vxlan99 type vxlan id 5001 group 239.0.0.99 ttl 10 dev ib0
-vxlan: destination port not specified
-Will use Linux kernel default (non-standard value)
-Use 'dstport 4789' to get the IANA assigned value
-Use 'dstport 0' to get default and quiet this message
-RTNETLINK answers: File exists
-[root@venus007 ~]# ip addr add 192.168.99.1/24 dev vxlan99
-[root@venus007 ~]# ip link set up dev vxlan99
-[root@venus007 ~]# iperf -u -s -B 239.0.0.99 &
-[1] 25654
-[root@venus007 ~]#
-{% endhighlight %}
-
-The second node...
-
-{% highlight bash %}
-[root@venus008 ~]# ip route add 224.0.0.0/4 dev ib0
-[root@venus008 ~]# ip link add vxlan99 type vxlan id 5001 group 239.0.0.99 ttl 10 dev ib0
-vxlan: destination port not specified
-Will use Linux kernel default (non-standard value)
-Use 'dstport 4789' to get the IANA assigned value
-Use 'dstport 0' to get default and quiet this message
-[root@venus008 ~]# ip addr add 192.168.99.2/24 dev vxlan99
-[root@venus008 ~]# ip link set up dev vxlan99
-[root@venus008 ~]# ip link show dev vxlan99
-172: vxlan99: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1994 qdisc noqueue state UNKNOWN mode DEFAULT
-    link/ether c2:0f:ce:de:90:f5 brd ff:ff:ff:ff:ff:ff
-[root@venus008 ~]# iperf -u -s -B 239.0.0.99 &
-[1] 15476
-[root@venus008 ~]# iperf -s
-{% endhighlight %}
-
-And benchmark the vxlan.
-
-{% highlight bash %}
-[root@venus007 ~]# iperf -c 192.168.99.2 -d
-------------------------------------------------------------
-Server listening on TCP port 5001
-TCP window size: 85.3 KByte (default)
-------------------------------------------------------------
-------------------------------------------------------------
-Client connecting to 192.168.99.2, TCP port 5001
-TCP window size: 1.02 MByte (default)
-------------------------------------------------------------
-[  5] local 192.168.99.1 port 46364 connected with 192.168.99.2 port 5001
-[  4] local 192.168.99.1 port 5001 connected with 192.168.99.2 port 33802
-[ ID] Interval       Transfer     Bandwidth
-[  5]  0.0-10.0 sec  2.66 GBytes  2.28 Gbits/sec
-[  4]  0.0-10.0 sec  2.13 GBytes  1.83 Gbits/sec
-[root@venus007 ~]#
-{% endhighlight %}
-
-And the other way around...
-
-{% highlight bash %}
-[root@venus008 ~]# iperf -c 192.168.99.1 -d
-------------------------------------------------------------
-Server listening on TCP port 5001
-TCP window size: 85.3 KByte (default)
-------------------------------------------------------------
-------------------------------------------------------------
-Client connecting to 192.168.99.1, TCP port 5001
-TCP window size:  790 KByte (default)
-------------------------------------------------------------
-[  5] local 192.168.99.2 port 33815 connected with 192.168.99.1 port 5001
-[  4] local 192.168.99.2 port 5001 connected with 192.168.99.1 port 46377
-[ ID] Interval       Transfer     Bandwidth
-[  5]  0.0-10.0 sec  2.15 GBytes  1.85 Gbits/sec
-[  4]  0.0-10.0 sec  2.64 GBytes  2.27 Gbits/sec
-[root@venus008 ~]#
-{% endhighlight %}
-
-Now I'll wait... 
-
-![](/pics/2016-01-09/tweet_vxlan_re.png)
-
+At the bottom of the post I discuss what I have tackled in terms of VXLAN performance - without much success. :(
 
 ## IPoIB - First strike!
 
@@ -277,6 +156,130 @@ rtt min/avg/max/mdev = 0.204/0.265/0.348/0.056 ms
 
 Lower ping, but as said... I would have expected more. :(
 
-## Conclusion
+## Discussion about VXLAN
 
-Even though the traffic uses the IPoIB interface it should be much faster. I'll sleep over it and ask around, why it's only at ethernet speed. Maybe there is a hand break that limits the traffic... To be continued...
+I reached out via twitter and was asked to check the raw performance of VXLAN ([slides](http://de.slideshare.net/naotomatsumoto/a-first-look-at-xvlan-over-infiniband-network-on-linux-37rc7)).
+
+![](/pics/2016-01-09/tweet_vxlan.png)
+
+### Kernel Options
+
+The kernel config should be alright:
+
+{% highlight bash %}
+[root@venus007 ~]# grep VXLAN /boot/config-3.10.0-327.3.1.el7.x86_64
+CONFIG_OPENVSWITCH_VXLAN=m
+CONFIG_VXLAN=m
+CONFIG_BE2NET_VXLAN=y
+CONFIG_I40E_VXLAN=y
+CONFIG_FM10K_VXLAN=y
+CONFIG_MLX4_EN_VXLAN=y
+# CONFIG_QLCNIC_VXLAN is not set
+{% endhighlight %}
+
+### Setup IPoIB plus VXLAN
+
+Setup a route for ib0.
+
+{% highlight bash %}
+[root@venus007 ~]# ip route add 224.0.0.0/4 dev ib0
+[root@venus007 ~]# route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.12.101  0.0.0.0         UG    100    0        0 enp4s0f0
+10.0.0.0        0.0.0.0         255.255.255.0   U     150    0        0 ib0
+172.17.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker0
+172.18.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker_gwbridge
+192.168.12.0    0.0.0.0         255.255.255.0   U     100    0        0 enp4s0f0
+224.0.0.0       0.0.0.0         240.0.0.0       U     0      0        0 ib0
+[root@venus007 ~]#
+
+{% endhighlight %}
+
+Now I mimic what was done in the slides - may the force be with me... :)
+
+{% highlight bash %}
+[root@venus007 ~]# ip link add vxlan99 type vxlan id 5001 group 239.0.0.99 ttl 10 dev ib0
+vxlan: destination port not specified
+Will use Linux kernel default (non-standard value)
+Use 'dstport 4789' to get the IANA assigned value
+Use 'dstport 0' to get default and quiet this message
+[root@venus007 ~]# ip link set up dev ib1
+[root@venus007 ~]# ip link add vxlan99 type vxlan id 5001 group 239.0.0.99 ttl 10 dev ib0
+vxlan: destination port not specified
+Will use Linux kernel default (non-standard value)
+Use 'dstport 4789' to get the IANA assigned value
+Use 'dstport 0' to get default and quiet this message
+RTNETLINK answers: File exists
+[root@venus007 ~]# ip addr add 192.168.99.1/24 dev vxlan99
+[root@venus007 ~]# ip link set up dev vxlan99
+[root@venus007 ~]# iperf -u -s -B 239.0.0.99 &
+[1] 25654
+[root@venus007 ~]#
+{% endhighlight %}
+
+The second node...
+
+{% highlight bash %}
+[root@venus008 ~]# ip route add 224.0.0.0/4 dev ib0
+[root@venus008 ~]# ip link add vxlan99 type vxlan id 5001 group 239.0.0.99 ttl 10 dev ib0
+vxlan: destination port not specified
+Will use Linux kernel default (non-standard value)
+Use 'dstport 4789' to get the IANA assigned value
+Use 'dstport 0' to get default and quiet this message
+[root@venus008 ~]# ip addr add 192.168.99.2/24 dev vxlan99
+[root@venus008 ~]# ip link set up dev vxlan99
+[root@venus008 ~]# ip link show dev vxlan99
+172: vxlan99: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1994 qdisc noqueue state UNKNOWN mode DEFAULT
+    link/ether c2:0f:ce:de:90:f5 brd ff:ff:ff:ff:ff:ff
+[root@venus008 ~]# iperf -u -s -B 239.0.0.99 &
+[1] 15476
+[root@venus008 ~]# iperf -s
+{% endhighlight %}
+
+### Benchmark once more
+
+And benchmark the vxlan.
+
+{% highlight bash %}
+[root@venus007 ~]# iperf -c 192.168.99.2 -d
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+------------------------------------------------------------
+Client connecting to 192.168.99.2, TCP port 5001
+TCP window size: 1.02 MByte (default)
+------------------------------------------------------------
+[  5] local 192.168.99.1 port 46364 connected with 192.168.99.2 port 5001
+[  4] local 192.168.99.1 port 5001 connected with 192.168.99.2 port 33802
+[ ID] Interval       Transfer     Bandwidth
+[  5]  0.0-10.0 sec  2.66 GBytes  2.28 Gbits/sec
+[  4]  0.0-10.0 sec  2.13 GBytes  1.83 Gbits/sec
+[root@venus007 ~]#
+{% endhighlight %}
+
+And the other way around...
+
+{% highlight bash %}
+[root@venus008 ~]# iperf -c 192.168.99.1 -d
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+------------------------------------------------------------
+Client connecting to 192.168.99.1, TCP port 5001
+TCP window size:  790 KByte (default)
+------------------------------------------------------------
+[  5] local 192.168.99.2 port 33815 connected with 192.168.99.1 port 5001
+[  4] local 192.168.99.2 port 5001 connected with 192.168.99.1 port 46377
+[ ID] Interval       Transfer     Bandwidth
+[  5]  0.0-10.0 sec  2.15 GBytes  1.85 Gbits/sec
+[  4]  0.0-10.0 sec  2.64 GBytes  2.27 Gbits/sec
+[root@venus008 ~]#
+{% endhighlight %}
+
+Now I'll wait... 
+
+![](/pics/2016-01-09/tweet_vxlan_re.png)
+
