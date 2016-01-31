@@ -1,7 +1,7 @@
 ---
 author: Christian Kniep
 layout: post
-title: FOSDEM #3: Samza for the masses
+title: "FOSDEM #3: Samza for the masses"
 date: 2016-01-30
 tags: eng docker blog consul samza
 ---
