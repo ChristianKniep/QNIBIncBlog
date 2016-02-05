@@ -8,9 +8,11 @@ tags: eng docker blog consul samza docker fosdem
 
 Talk is done... I hope it brought up some new ideas. 
 
-![](/pics/2016-01-31/fosdem_slides.png)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mKM8GrBn5gg" frameborder="0" allowfullscreen></iframe>
 
 I hope that the videos will be available some day, until then the slides are available [here](/data/2016-01-31_FOSDEM/FOSDEM2016_Kniep_DockerHPCCluster.pdf).
+
+![](/pics/2016-01-31/fosdem_slides.png)
 
 ## eGalea Conference
 
