@@ -25,35 +25,34 @@ The (initial) agenda for the Workshop is as follows. It will evolve (hopefully q
 | Slot# |   Title                                  | Speaker   |  Company | State  |
 |:-----:|:----------------------------------- |:------------- |:------:|:------:|
 | 0 | Introduction                        | Christian Kniep | Gaikai Inc | ![](/pics/confirmed.png) | 
-| 1 | Linux Containers in a Nutshell | Holger Gantikow | science+computing ag |  |
+| 1 | Linux Containers in a Nutshell | Holger Gantikow | science+computing ag | ![](/pics/confirmed.png)  |
 | 2 | What drives docker in Non-HPC and how to catch up? | Christian Kniep | Gaikai Inc. | ![](/pics/confirmed.png) |
 | 3 | Singularity - best of Containers and clean packaging? | Bernard Li | Berkeley Labs |  |
-| 4 | UberCloud - Tackle the ISV | Wolfgang Gentzsch | UberCloud | ![](/pics/confirmed.png) |
-| 5 | Docker Volumes w/ BeeGFS | Jasper Lievisse Adriaanse | RedCoolBeans |  ![](/pics/confirmed.png) |
-| 6 | RDMA Namespace & CGroups for InfiniBand | | Mellanox | |
-| 7? | From System Containers to Shared Namespaces | Christian Kniep | Gaikai Inc. | |
-| 7? | Shared GPUs within Containers using rCUDA | | | |
-| 8 | Conclusion, Panel Discussion | Christian Kniep | Gaikai Inc. | ![](/pics/confirmed.png) |
+| 4 | From System Containers to Shared Namespaces | Christian Kniep | Gaikai Inc. | ![](/pics/confirmed.png) |
+| 5 | UberCloud - Tackle the ISV | Wolfgang Gentzsch | UberCloud | ![](/pics/confirmed.png) |
+| 6 | Docker Volumes w/ BeeGFS | Jasper Lievisse Adriaanse | RedCoolBeans |  ![](/pics/confirmed.png) |
+| 7 | Conclusion, Panel Discussion | Christian Kniep | Gaikai Inc. | ![](/pics/confirmed.png) |
 
 ### Details
 
 #### Linux Containers in a Nutshell (Holger)
 <div id="portrait">
-    <img height="75" src="/pics/isc/holger.jpg">
+    <img height="100" src="/pics/isc/holger.jpg">
 </div>
-Holger will kick the workshop of by providing an introduction into what Linux Containers are all about.
- <br>
- <br>
- <br>
+Container-based virtualization has many advantages when it comes to packaging and distributing applications and their dependencies and thus helps reducing the complexity of operations.<br>
+This talk gives a brief introduction to Linux containers and especially their driving force "Docker", their suitability for scientific computation workflows and resource-intensive HPC simulations.<br>
+As the progress of the Docker platform is fast paced and constantly evolving, the talk will also shed some light on the latest and greatest developments, including multi-host networking and the new high performance container daemon "containerd".
+
 
 #### What drives docker in Non-HPC and how to catch up? (Christian)
 <div id="portrait">
-    <img height="75" src="/pics/Christian.png">
+    <img height="100" src="/pics/Christian.png">
 </div>
 Docker benefits the non-HPC environments with its boost to software development by providing fast feedback loops and an easy setup of development environment.<br>
 This part will dive into why that is and shed some light on why HPC environments haven't benefited yet.
  <br>
-
+ <br>
+ 
 #### Singularity - best of Containers and clean packaging? (Bernard)
 
 #### UberCloud - Tackle the ISV (Wolfgang)
@@ -71,17 +70,9 @@ RedCoolBeans has developed a plugin for Docker to allow containers to store data
  <br>
 
 
-#### RDMA Namespace & CGroups for InfiniBand
-
-
 #### From System Containers to Shared Namespaces (Christian)
 
 At first glance Linux Containers could just be a lightweight substitute for VM. But if the namespaces are embraced it turns into a framework to piece together each part of the runtime environment using different containers and thus, allow different user-lands to provide different services.
-
-#### Shared GPUs within Containers using rCUDA
-
-With [rCUDA](http://www.rcuda.net/) GPU resources can be shard over the network in order to use CUDA remotely. This applied to Linux Containers would make the individual application extremely portable. A developer could run the container locally using CUDA and push the container to a cluster with some GPUs attached and run the application using rCUDA. <br>
-**This talk is not settled yet, as we are figuring out who will talk about it - if you like to participate, ping me**
 
 #### Conclusion, Panel Discussion	 (.*)
 
