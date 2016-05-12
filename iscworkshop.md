@@ -8,15 +8,14 @@ permalink: /isc/
 
 This years 'Linux Container' workshop at the ISC 2016 is called: <br>
  **Docker: Linux Containers to Optimise IT Infrastructure for HPC & BigData**.
+ 
+It is held after the International Supercomputing Conference in Frankfurt on June 23rd at the Marriott hotel.
+
+- **Official agenda page**: http://www.isc-hpc.com/isc16_ap/sessiondetails.htm?t=session&o=426&a=select&ra=index
 
 Unlike last year the focus is to provide actionable knowledge about the world of Linux Containers, discuss problems and possible solutions.
-The initial agenda will be pushed out as soon as possible. Please revisit this side in a couple of days.
 
-For an idea of what the workshop is going to touch on the following video recording of the host's talk in Lugano provides some guidance:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3gTJj-HuZuo?list=PLfE3_wJGw9KS3PBvqEcDdpiODeDjAs5v8" frameborder="0" allowfullscreen></iframe>
-
-The issues are talked about from [0:22:30](https://youtu.be/3gTJj-HuZuo?list=PLfE3_wJGw9KS3PBvqEcDdpiODeDjAs5v8&t=1350) on.
+**Joker Spots**: If you have an interesting proposal for a talk, don't hesitate to contact me - even on short notice.
 
 ## Agenda
 
@@ -77,3 +76,11 @@ At first glance Linux Containers could just be a lightweight substitute for VM. 
 #### Conclusion, Panel Discussion	 (.*)
 
 The workshop is wrapped up by providing some wiggle room to take questions and provide an outlook (wishlist) how Linux Containers evolve in the foreseeable future.
+
+### Motivation
+
+For an idea of what the workshop is going to touch on the following video recording of the host's talk in Lugano provides some guidance:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3gTJj-HuZuo?list=PLfE3_wJGw9KS3PBvqEcDdpiODeDjAs5v8" frameborder="0" allowfullscreen></iframe>
+
+The issues are talked about from [0:22:30](https://youtu.be/3gTJj-HuZuo?list=PLfE3_wJGw9KS3PBvqEcDdpiODeDjAs5v8&t=1350) on.
