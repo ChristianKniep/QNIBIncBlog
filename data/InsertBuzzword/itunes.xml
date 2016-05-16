@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+
+  <channel>
+    <title>InsertBuzzword</title>
+    <link>http://www.qnib.org/insert-buzzword</link>
+    <language>en-us</language>
+    <copyright>&#x2117; &amp; &#xA9; , Christian Kniep/Hagen Tönnies </copyright>
+    <itunes:subtitle>Talking about projects, processes and news items as DevOpsArchitects</itunes:subtitle>
+    <itunes:author>Christian Kniep/Hagen Tönnies</itunes:author>
+    <itunes:summary>Fireside chat between Ops and Dev</itunes:summary>
+    <description>Fireside chat between Ops and Dev</description>
+
+    <itunes:owner>
+      <itunes:name>Christian Kniep/Hagen Tönnies</itunes:name>
+      <itunes:email>podcast@qnib.org</itunes:email>
+    </itunes:owner>``
+
+    <itunes:image href="http://qnib.org/data/InsertBuzzword/insertbuzzword.png" />
+
+    <itunes:category text="Technology">
+      <itunes:category text="Podcasting"/>
+    </itunes:category>
+
+    <itunes:explicit>no</itunes:explicit>
+    
+    <item>
+      <title>Piped Metrics [DE]</title>
+      <itunes:subtitle>Talking about Metrics Collection, Kafka Streams and filling meterial in between.</itunes:subtitle>
+      <itunes:author>Christian/Hagen</itunes:author>
+      <itunes:summary>We are getting our feed wet in our first podcast (EVER!).</itunes:summary>
+      <itunes:image href="http://qnib.org/data/InsertBuzzword/001/cover.png" />
+
+      <enclosure url="http://qnib.org/data/InsertBuzzword/001/IB001.m4a" length="113.410.397" type="audio/mpeg" />
+
+      <guid>1</guid>
+
+      <pubDate>Wed, 11 May 2016 10:00:00 CEST</pubDate>
+
+      <itunes:duration>3593.0</itunes:duration>
+
+    </item>
+    
+  </channel>
+</rss>
