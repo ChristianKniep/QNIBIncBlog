@@ -6,6 +6,8 @@ permalink: /insert-buzzword/
 
 # Podcast
 
+Feed-Link: [http://qnib.org/data/InsertBuzzword/itunes.xml](http://qnib.org/data/InsertBuzzword/itunes.xml)
+
 ### English
 
 My workmate Hagen and myself recorded our first podcast. We are quite excited about it and looking forward to at least a second one. :)
