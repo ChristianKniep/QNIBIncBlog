@@ -26,9 +26,9 @@ The (initial) agenda for the Workshop is as follows. It will evolve (hopefully q
 | 0 | Introduction                        | Christian Kniep | Gaikai Inc | ![](/pics/confirmed.png) | 
 | 1 | Linux Containers in a Nutshell | Holger Gantikow | science+computing ag | ![](/pics/confirmed.png)  |
 | 2 | What drives docker in Non-HPC and how to catch up? | Christian Kniep | Gaikai Inc. | ![](/pics/confirmed.png) |
-| 3 | Singularity - best of Containers and clean packaging? | Bernard Li | Berkeley Labs |  |
-| 4 | From System Containers to Shared Namespaces | Christian Kniep | Gaikai Inc. | ![](/pics/confirmed.png) |
-| 5 | UberCloud - Tackle the ISV | Wolfgang Gentzsch | UberCloud | ![](/pics/confirmed.png) |
+| 3 | Singularity - best of Containers and clean packaging? | Christian Kniep | Gaikai Inc | ![](/pics/confirmed.png) |
+| 4 | UberCloud - Tackle the ISV | Wolfgang Gentzsch | UberCloud | ![](/pics/confirmed.png) |
+| 5 | From System Containers to Shared Namespaces | Christian Kniep | Gaikai Inc. | ![](/pics/confirmed.png) |
 | 6 | Docker Volumes w/ BeeGFS | Jasper Lievisse Adriaanse | RedCoolBeans |  ![](/pics/confirmed.png) |
 | 7 | Conclusion, Panel Discussion | Christian Kniep | Gaikai Inc. | ![](/pics/confirmed.png) |
 
