@@ -52,13 +52,19 @@ This part will dive into why that is and shed some light on why HPC environments
  <br>
  <br>
  
-#### Singularity - best of Containers and clean packaging? (Bernard)
+#### Singularity - best of Containers and clean packaging? (Christian)
 
-#### UberCloud - Tackle the ISV (Wolfgang)
+Singularity is a container platform built around the notion of "Mobility of Compute". With Singularity you can build executable containers based on your host system and define what happens when that container is launched. Processes inside the container can be single binaries, or a complex of binaries, scripts and data.
+
+#### UberCloud - Tackling the Software Providers with Containers (Wolfgang)
 <div id="portrait">
     <img height="75" src="/pics/isc/wolfgang.jpg">
 </div>
-UberCloud has developed software containers to host ISV codes for on-premise and in the HPC Cloud environments. These production ready containers bundle OS, libraries and software tools as well as ISV software and even whole engineering and scientific workflows. By eliminating the need to install software and configure the high performance computing environment, the time for packaging and accessing ISV software in the cloud has been reduced dramatically.
+UberCloud has developed software containers to host software for on-premise and in the HPC Cloud. These production ready containers bundle libraries and software tools as well as ISV software and even whole engineering and scientific workflows. By eliminating the need to install software and configure the high performance computing environment, the time for packaging and accessing ISV software in the cloud has been reduced dramatically.
+
+#### From System Containers to Shared Namespaces (Christian)
+
+At first glance Linux Containers could just be a lightweight substitute for VM. But if the namespaces are embraced it turns into a framework to piece together each part of the runtime environment using different containers and thus, allow different user-lands to provide different services.
 
 #### Docker Volumes w/ BeeGFS (Jasper)
 <div id="portrait">
@@ -68,10 +74,6 @@ RedCoolBeans has developed a plugin for Docker to allow containers to store data
  <br>
  <br>
 
-
-#### From System Containers to Shared Namespaces (Christian)
-
-At first glance Linux Containers could just be a lightweight substitute for VM. But if the namespaces are embraced it turns into a framework to piece together each part of the runtime environment using different containers and thus, allow different user-lands to provide different services.
 
 #### Conclusion, Panel Discussion	 (.*)
 
