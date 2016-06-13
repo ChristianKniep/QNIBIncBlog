@@ -41,6 +41,53 @@
       <itunes:duration>3593.0</itunes:duration>
 
     </item>
+    <item>
+      <title>Ruby-Mett [EN]</title>
+      <itunes:subtitle>QNIBCollect, Ruby decline and Linux Containers</itunes:subtitle>
+      <itunes:author>Christian/Hagen</itunes:author>
+      <itunes:summary>Talking about QNIBCollect (Fullerite Clone), the decline of Ruby (DevCulture in general) and a shallow peek into Linux Containers.</itunes:summary>
+      <itunes:image href="http://qnib.org/data/InsertBuzzword/002/cover.png" />
+
+      <enclosure url="http://qnib.org/data/InsertBuzzword/002/IB002.m4a" length="75.861.934" type="audio/mpeg" />
+
+      <guid>2</guid>
+
+      <pubDate>Tue, 24 May 2016 10:00:00 CEST</pubDate>
+
+      <itunes:duration>4675.0</itunes:duration>
+
+    </item>
+    <item>
+      <title>Boeuf Sturgeon [DE]</title>
+      <itunes:subtitle>Cut furrows through the valley of DevOps Culture</itunes:subtitle>
+      <itunes:author>Christian/Hagen</itunes:author>
+      <itunes:summary>Touching on what team/company culture might/used to/should look like.</itunes:summary>
+      <itunes:image href="http://qnib.org/data/InsertBuzzword/003/cover.png" />
+
+      <enclosure url="http://qnib.org/data/InsertBuzzword/003/IB003.m4a" length="135.363.118" type="audio/mpeg" />
+
+      <guid>3</guid>
+
+      <pubDate>Tue, 27 May 2016 10:00:00 CEST</pubDate>
+
+      <itunes:duration>4086.0</itunes:duration>
+
+    </item>
+    <item>
+      <title>Buzzwords Inception [EN]</title>
+      <itunes:subtitle>All things Berlin Buzzwords</itunes:subtitle>
+      <itunes:author>Christian/Hagen</itunes:author>
+      <itunes:summary>Hagen reports about his attendance at the Berlin Buzzwords conference.</itunes:summary>
+      <itunes:image href="http://qnib.org/data/InsertBuzzword/004/cover.png" />
+      <enclosure url="http://qnib.org/data/InsertBuzzword/004/IB004.m4a" length="81.239.039" type="audio/mpeg" />
+
+      <guid>4</guid>
+
+      <pubDate>Fri, 10 June 2016 10:00:00 CEST</pubDate>
+
+      <itunes:duration>5007.0</itunes:duration>
+
+    </item>
     
   </channel>
 </rss>
