@@ -6,7 +6,8 @@ permalink: /insert-buzzword/
 
 ## Podcast
 
-Feed-Link: [http://qnib.org/data/InsertBuzzword/itunes.xml](http://qnib.org/data/InsertBuzzword/itunes.xml)
+Feed-Link: [http://qnib.org/data/InsertBuzzword/itunes.xml](http://qnib.org/data/InsertBuzzword/itunes.xml)<br>
+[![](http://images.apple.com/itunes/link/images/link-badge-itunes.png)](https://itunes.apple.com/de/podcast/insertbuzzword/id1114280923?l=en&mt=2)
 
 ### English
 
