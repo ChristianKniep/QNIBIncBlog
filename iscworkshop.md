@@ -19,18 +19,19 @@ Unlike last year the focus is to provide actionable knowledge about the world of
 
 ## Agenda
 
-The (initial) agenda for the Workshop is as follows. It will evolve (hopefully quickly) in the days to come.
+The agenda for the Workshop is as follows. 
 
-| Slot# |   Title                                  | Speaker   |  Company | State  |
-|:-----:|:----------------------------------- |:------------- |:------:|:------:|
-| 0 | Introduction                        | Christian Kniep | Gaikai Inc | ![](/pics/confirmed.png) | 
-| 1 | Linux Containers in a Nutshell | Holger Gantikow | science+computing ag | ![](/pics/confirmed.png)  |
-| 2 | What drives docker in Non-HPC and how to catch up? | Christian Kniep | Gaikai Inc. | ![](/pics/confirmed.png) |
-| 3 | Singularity - best of Containers and clean packaging? | Christian Kniep | Gaikai Inc | ![](/pics/confirmed.png) |
-| 4 | UberCloud - Tackle the ISV | Wolfgang Gentzsch | UberCloud | ![](/pics/confirmed.png) |
-| 5 | From System Containers to Shared Namespaces | Christian Kniep | Gaikai Inc. | ![](/pics/confirmed.png) |
-| 6 | Docker Volumes w/ BeeGFS | Jasper Lievisse Adriaanse | RedCoolBeans |  ![](/pics/confirmed.png) |
-| 7 | Conclusion, Panel Discussion | Christian Kniep | Gaikai Inc. | ![](/pics/confirmed.png) |
+| Slot# |  Time |  Title                                  | Speaker             |  Company |
+|:-------:|:-------:|:---------------------------------- |:--------------------- |:--------------:|
+| 0 | 2:00pm | Introduction                          | Christian Kniep | Gaikai Inc  |
+| 1 | 2:10pm | Linux Containers in a Nutshell | Holger Gantikow | science+computing ag |
+| 2 | 3:00pm | What drives docker in Non-HPC and how to catch up? | Christian Kniep | Gaikai Inc. |
+| 3 | 3:30pm | Missing Pieces: Singularity, RDMA and others... | Christian Kniep | Gaikai Inc |
+|    | 4:00pm | Coffee Break | | |
+| 4 | 4:30pm | UberCloud - Tackle the ISV | Wolfgang Gentzsch | UberCloud |
+| 5 | 5:00pm | From System Containers to Shared Namespaces | Christian Kniep | Gaikai Inc. |
+| 6 | 5:15pm | Docker Volumes w/ BeeGFS | Jasper Lievisse Adriaanse | RedCoolBeans |
+| 7 | 5:45pm | Conclusion, Q&A | Christian Kniep | Gaikai Inc. |
 
 ### Details
 
@@ -52,9 +53,13 @@ This part will dive into why that is and shed some light on why HPC environments
  <br>
  <br>
  
-#### Singularity - best of Containers and clean packaging? (Christian)
+#### Missing Pieces: Singularity, RDMA and others...
 
-Singularity is a container platform built around the notion of "Mobility of Compute". With Singularity you can build executable containers based on your host system and define what happens when that container is launched. Processes inside the container can be single binaries, or a complex of binaries, scripts and data.
+In this part Christian is touching on Singularity, a container platform built around the notion of "Mobility of Compute". With Singularity you can build executable containers based on your host system and define what happens when that container is launched. Processes inside the container can be single binaries, or a complex of binaries, scripts and data.
+
+Second he will talk about Mellanox effort to bring RDMA Namespaces and CGroups into the Linux kernel, which allows a fine grained resource usage and scheduling of InfiniBand devices.
+
+Furthermore Christian will give a small outlook what is next... :)
 
 #### UberCloud - Tackling the Software Providers with Containers (Wolfgang)
 <div id="portrait">
@@ -75,7 +80,7 @@ RedCoolBeans has developed a plugin for Docker to allow containers to store data
  <br>
 
 
-#### Conclusion, Panel Discussion	 (.*)
+#### Conclusion, Q&A	 (.*)
 
 The workshop is wrapped up by providing some wiggle room to take questions and provide an outlook (wishlist) how Linux Containers evolve in the foreseeable future.
 
