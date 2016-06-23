@@ -29,9 +29,8 @@ The agenda for the Workshop is as follows.
 | 3 | 3:30pm | Missing Pieces: Singularity, RDMA and others... | Christian Kniep | Gaikai Inc |
 |    | 4:00pm | Coffee Break | | |
 | 4 | 4:30pm | UberCloud - Tackle the ISV | Wolfgang Gentzsch | UberCloud |
-| 5 | 5:00pm | From System Containers to Shared Namespaces | Christian Kniep | Gaikai Inc. |
-| 6 | 5:15pm | Docker Volumes w/ BeeGFS | Jasper Lievisse Adriaanse | RedCoolBeans |
-| 7 | 5:45pm | Conclusion, Q&A | Christian Kniep | Gaikai Inc. |
+| 5 | 5:00pm | Docker Volumes w/ BeeGFS | Jasper Lievisse Adriaanse | RedCoolBeans |
+| 6 | 5:30pm | Conclusion, Q&A | Christian Kniep | Gaikai Inc. |
 
 ### Details
 
@@ -66,10 +65,6 @@ Furthermore Christian will give a small outlook what is next... :)
     <img height="75" src="/pics/isc/wolfgang.jpg">
 </div>
 UberCloud has developed software containers to host software for on-premise and in the HPC Cloud. These production ready containers bundle libraries and software tools as well as ISV software and even whole engineering and scientific workflows. By eliminating the need to install software and configure the high performance computing environment, the time for packaging and accessing ISV software in the cloud has been reduced dramatically.
-
-#### From System Containers to Shared Namespaces (Christian)
-
-At first glance Linux Containers could just be a lightweight substitute for VM. But if the namespaces are embraced it turns into a framework to piece together each part of the runtime environment using different containers and thus, allow different user-lands to provide different services.
 
 #### Docker Volumes w/ BeeGFS (Jasper)
 <div id="portrait">
