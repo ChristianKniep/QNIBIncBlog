@@ -21,16 +21,16 @@ Unlike last year the focus is to provide actionable knowledge about the world of
 
 The agenda for the Workshop is as follows. 
 
-| Slot# |  Time |  Title                                  | Speaker             |  Company |
-|:-------:|:-------:|:---------------------------------- |:--------------------- |:--------------:|
-| 0 | 2:00pm | Introduction                          | Christian Kniep | Gaikai Inc  |
-| 1 | 2:10pm | Linux Containers in a Nutshell | Holger Gantikow | science+computing ag |
-| 2 | 3:00pm | What drives docker in Non-HPC and how to catch up? | Christian Kniep | Gaikai Inc. |
-| 3 | 3:30pm | Missing Pieces: Singularity, RDMA and others... | Christian Kniep | Gaikai Inc |
+| Slot# |  Time |  Title                                  | Speaker             |  Company | Resources |
+|:-------:|:-------:|:---------------------------------- |:--------------------- |:--------------:|:---------:|
+| 0 | 2:00pm | Introduction                          | Christian Kniep | Gaikai Inc  | [Youtube](https://www.youtube.com/watch?v=b_pJMhcVg7I&index=1&list=PLfE3_wJGw9KS0Zcl1KEEzziRMT5rYtGXv) |
+| 1 | 2:10pm | Linux Containers in a Nutshell | Holger Gantikow | science+computing ag | [PDF](/data/isc2016/0_linux_containers.pdf) / [Youtube](https://www.youtube.com/watch?v=gol0umv5DU0&index=2&list=PLfE3_wJGw9KS0Zcl1KEEzziRMT5rYtGXv) |
+| 2 | 3:00pm | What drives docker in Non-HPC and how to catch up? | Christian Kniep | Gaikai Inc. | [PDF](/data/isc2016/2_docker_drivers.pdf) / [Youtube](https://www.youtube.com/watch?v=sFNMh78bxaU&index=3&list=PLfE3_wJGw9KS0Zcl1KEEzziRMT5rYtGXv) |
+| 3 | 3:30pm | Missing Pieces: Singularity, RDMA and others... | Christian Kniep | Gaikai Inc | [PDF](/data/isc2016/3_missing_pieces.pdf) / [Youtube](https://www.youtube.com/watch?v=IC74-Zz3J9Q&index=4&list=PLfE3_wJGw9KS0Zcl1KEEzziRMT5rYtGXv) |
 |    | 4:00pm | Coffee Break | | |
-| 4 | 4:30pm | UberCloud - Tackle the ISV | Wolfgang Gentzsch | UberCloud |
-| 5 | 5:00pm | Docker Volumes w/ BeeGFS | Jasper Lievisse Adriaanse | RedCoolBeans |
-| 6 | 5:30pm | Conclusion, Q&A | Christian Kniep | Gaikai Inc. |
+| 4 | 4:30pm | UberCloud - Tackle the ISV | Wolfgang Gentzsch | UberCloud | [PDF](/data/isc2016/4_ubercloud.pdf) / [Youtube](https://www.youtube.com/watch?v=3qTLl8yJSxY&index=5&list=PLfE3_wJGw9KS0Zcl1KEEzziRMT5rYtGXv) |
+| 5 | 5:00pm | Docker Volumes w/ BeeGFS | Jasper Lievisse Adriaanse | RedCoolBeans | [PDF](/data/isc2016/5_docker_volumes.pdf) / [Youtube](https://www.youtube.com/watch?v=pUXzBqmfrdk&list=PLfE3_wJGw9KS0Zcl1KEEzziRMT5rYtGXv&index=6) |
+| 6 | 5:30pm | Singularity and HPC process problems | Christian Kniep interviewing Greg Kurtzer | Gaikai Inc. / Berkeley Labs | [Youtube](https://www.youtube.com/watch?v=YGBm_cx2pI0&list=PLfE3_wJGw9KS0Zcl1KEEzziRMT5rYtGXv&index=7) |
 
 ### Details
 
