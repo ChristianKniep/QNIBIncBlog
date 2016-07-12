@@ -95,6 +95,17 @@
       <pubDate>Fri, 15 June 2016 10:00:00 CEST</pubDate>
       <itunes:duration>4134.0</itunes:duration>
     </item>
+    <item>
+      <title>Docker Bundle [EN]</title>
+      <itunes:subtitle>Iteration on the Linux Container episode in which we explaine the journey up to the current RC Docker 1.12</itunes:subtitle>
+      <itunes:author>Christian/Hagen</itunes:author>
+      <itunes:summary>Iteration on the Linux Container episode in which we explaine the journey up to the current RC Docker 1.12</itunes:summary>
+      <itunes:image href="http://qnib.org/data/InsertBuzzword/006/cover.png" />
+      <enclosure url="http://qnib.org/data/InsertBuzzword/006/IB006.m4a" length="167.087.774" type="audio/mpeg" />
+      <guid>6</guid>
+      <pubDate>Fri, 12 July 2016 10:00:00 CEST</pubDate>
+      <itunes:duration>5054.0</itunes:duration>
+    </item>
     
   </channel>
 </rss>
