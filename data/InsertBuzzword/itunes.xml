@@ -24,7 +24,7 @@
     </itunes:category>
 
     <itunes:explicit>no</itunes:explicit>
-    
+
     <item>
       <title>Piped Metrics [DE]</title>
       <itunes:subtitle>Talking about Metrics Collection, Kafka Streams and filling meterial in between.</itunes:subtitle>
@@ -101,11 +101,22 @@
       <itunes:author>Christian/Hagen</itunes:author>
       <itunes:summary>Iteration on the Linux Container episode in which we explaine the journey up to the current RC Docker 1.12</itunes:summary>
       <itunes:image href="http://qnib.org/data/InsertBuzzword/006/cover.png" />
-      <enclosure url="http://qnib.org/data/InsertBuzzword/006/IB006.m4a" length="167.087.774" type="audio/mpeg" />
+      <enclosure url="http://qnib.org/data/InsertBuzzword/006/IB006.m4a" length="166.378.538" type="audio/mpeg" />
       <guid>6</guid>
       <pubDate>Fri, 12 July 2016 10:00:00 CEST</pubDate>
-      <itunes:duration>5054.0</itunes:duration>
+      <itunes:duration>5035.0</itunes:duration>
     </item>
-    
+    <item>
+      <title>Data Intensive Pipeline</title>
+      <itunes:subtitle>Hagen talks about a book he was reading lately and stuff he though about in regards of Data Pipelines.</itunes:subtitle>
+      <itunes:author>Christian/Hagen</itunes:author>
+      <itunes:summary>Hagen talks about a book he was reading lately and stuff he though about in regards of Data Pipelines.</itunes:summary>
+      <itunes:image href="http://qnib.org/data/InsertBuzzword/0067cover.png" />
+      <enclosure url="http://qnib.org/data/InsertBuzzword/007/IB007.m4a" length="91.410.997" type="audio/mpeg" />
+      <guid>7</guid>
+      <pubDate>Mon, 27 July 2016 10:00:00 CEST</pubDate>
+      <itunes:duration>2789.0</itunes:duration>
+    </item>
+
   </channel>
 </rss>
