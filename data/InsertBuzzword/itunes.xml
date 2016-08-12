@@ -111,12 +111,22 @@
       <itunes:subtitle>Hagen talks about a book he was reading lately and stuff he though about in regards of Data Pipelines.</itunes:subtitle>
       <itunes:author>Christian/Hagen</itunes:author>
       <itunes:summary>Hagen talks about a book he was reading lately and stuff he though about in regards of Data Pipelines.</itunes:summary>
-      <itunes:image href="http://qnib.org/data/InsertBuzzword/0067cover.png" />
+      <itunes:image href="http://qnib.org/data/InsertBuzzword/007/cover.png" />
       <enclosure url="http://qnib.org/data/InsertBuzzword/007/IB007.m4a" length="91.410.997" type="audio/mpeg" />
       <guid>7</guid>
       <pubDate>Mon, 27 July 2016 10:00:00 CEST</pubDate>
       <itunes:duration>2789.0</itunes:duration>
     </item>
-
+    <item>
+      <title>Apache Stream Processing</title>
+      <itunes:subtitle>We walk through 10 Apache Stream Processing Projects. Yes, they are plenty... :)</itunes:subtitle>
+      <itunes:author>Christian/Hagen</itunes:author>
+      <itunes:summary>We walk through 10 Apache Stream Processing Projects. Yes, they are plenty... :)</itunes:summary>
+      <itunes:image href="http://qnib.org/data/InsertBuzzword/008/cover.png" />
+      <enclosure url="http://qnib.org/data/InsertBuzzword/008/IB008.m4a" length="172.029.832" type="audio/mpeg" />
+      <guid>8</guid>
+      <pubDate>Mon, 12 August 2016 10:00:00 CEST</pubDate>
+      <itunes:duration>5194.0</itunes:duration>
+    </item>
   </channel>
 </rss>
