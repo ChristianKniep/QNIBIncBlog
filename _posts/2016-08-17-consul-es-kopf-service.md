@@ -2,11 +2,15 @@
 author: Christian Kniep
 layout: post
 title: "Elasticsearch/Kopf as a Distributed (Docker) Service"
-date: 2016-08-17 19:00
+date: 2016-08-17
 tags: eng docker blog
 ---
 
 Running Docker services on single nodes is quite boring, so let's boot up three boxes with the latest version of docker.
+
+This is a blog post to accompany the talk I gave a the [Berlin Docker Meetup](https://www.meetup.com/Lieferando-Tech-Events-Berlin/events/233138777/):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g-YNST-COdI" frameborder="0" allowfullscreen></iframe>
 
 ## Create multi-host Docker SWARM
 
