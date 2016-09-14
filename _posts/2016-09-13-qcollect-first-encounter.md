@@ -23,7 +23,7 @@ I am using DockerForMac, which exposes the docker socket on `/var/run/docker.soc
 Currently `qcollect` uses the Docker environment variables; in the next iteration this should be configured in a more convenient way.
 
 {% highlight bash %}
-git clone https://github.com/qnib/docker-qcollect.git
+➜  temp git clone https://github.com/qnib/docker-qcollect.git
 Cloning into 'docker-qcollect'...
 remote: Counting objects: 108, done.
 remote: Compressing objects: 100% (26/26), done.
