@@ -1,7 +1,7 @@
 ---
 layout: page
-title: ISC Workshop
-permalink: /isc/
+title: ISC Workshop 2016
+permalink: /isc2016/
 ---
 
 # ISC 2016 Workshop

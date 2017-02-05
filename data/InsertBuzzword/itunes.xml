@@ -128,5 +128,27 @@
       <pubDate>Mon, 12 August 2016 10:00:00 CEST</pubDate>
       <itunes:duration>5194.0</itunes:duration>
     </item>
+    <item>
+      <title>Beyond Batch Part1</title>
+      <itunes:subtitle>As promised last time, we talk about the first of two blog-post of Tyler Akidau, in which he explains the concepts behind 'streaming' and why you should call it different.</itunes:subtitle>
+      <itunes:author>Christian/Hagen</itunes:author>
+      <itunes:summary>As promised last time, we talk about the first of two blog-post of Tyler Akidau, in which he explains the concepts behind 'streaming' and why you should call it different.</itunes:summary>
+      <itunes:image href="http://qnib.org/insert-buzzword/episode/img/ib9-cover.png" />
+      <enclosure url="http://qnib.org/insert-buzzword/episode/audio/ib9.m4a" length="140.846.145" type="audio/mpeg" />
+      <guid>9</guid>
+      <pubDate>Mon, 31 August 2016 10:00:00 CEST</pubDate>
+      <itunes:duration>4401.0</itunes:duration>
+    </item>
+    <item>
+      <title>WrapUp 2016 w/ Patrick</title>
+      <itunes:subtitle>WrapUp of 2016, mostly about Clojure, Redux and Docker... :)</itunes:subtitle>
+      <itunes:author>Christian/Hagen</itunes:author>
+      <itunes:summary>WrapUp of 2016, mostly about Clojure, Redux and Docker... :)</itunes:summary>
+      <itunes:image href="http://qnib.org/insert-buzzword/episode/img/ib10-cover.png" />
+      <enclosure url="http://qnib.org/insert-buzzword/episode/audio/ib10.m4a" length="128.999.137" type="audio/mpeg" />
+      <guid>10</guid>
+      <pubDate>Tue, 20 December 2016 10:00:00 CEST</pubDate>
+      <itunes:duration>3720.0</itunes:duration>
+    </item>
   </channel>
 </rss>
