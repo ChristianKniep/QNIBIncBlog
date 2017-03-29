@@ -8,6 +8,16 @@ tags: eng melig blog
 
 During the [latest MeetUp](https://www.meetup.com/M-E-L-I-G-Berlin-Metrics-Events-Logs-Inventory-Glue/events/238294391/) we talked about the rise of virtualization techniques and how software changed from clunky big services to state-less functions.
 
+## Slides & Videos
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/vGuHkdLSzirLBb" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/QnibSolutions/melig-unikernel-and-serverless" title="M.E.L.I.G. Unikernel and Serverless" target="_blank">M.E.L.I.G. Unikernel and Serverless</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/QnibSolutions">QNIB Solutions</a></strong> </div>
+
+The videos are split in three, as my Windows capturing box was rebooting twice. Furthermore I somewhat screwed up the ratio a bit, it's been a while...<br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Nnt0L8rN-iE" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jekqAIztHvg" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NYgwwKAl-og" frameborder="0" allowfullscreen></iframe>
+
 ## Virtualization
 
 While VMs and containers are all over the place I wanted to give an introduction to Unikernels. Which merges application code, libraries and the bits&pieces of the kernel needed into an 'application kernel'.
