@@ -12,6 +12,20 @@ This years 'Linux Container' workshop at the ISC 2017 is called: <br>
  
 It is held after the International Supercomputing Conference in Frankfurt on **June 22rd from 2PM to 6PM** at the Marriott Hotel.
 
+## Previous ISC Workshops
+
+<ul class="posts">
+{% for post in site.posts %}
+  {% if post.tags contains 'iscworkshop' %}
+      <div class="post_info">
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <span>({{ post.date | date:"%Y-%m-%d" }})</span>
+        </li>
+      </div>
+  {% endif %}
+{% endfor %}
+</ul>
 
 ## Agenda
 
@@ -20,13 +34,14 @@ The initial agenda reads as follows, the agenda is subject to refinements.
 | Slot# |  Time |  Title                                          | Speaker                         |
 |:-----:|:-----:|:------------------------------------------------|:--------------------------------|
 | 14:00 | 5min  | Introduction                                    | Christian Kniep                 |
-| 14:05 | 25min | Linux Containers Technology                     | Holger Gantikow                 |
+| 14:05 | 25min | Linux Containers Technology & Runtimes          | Holger Gantikow                 |
 | 14:30 | 30min | Docker Ecosystem: Engine, Swarm, Compose        | Christian Kniep                 |
 | 15:00 | 30min | Non-Docker Ecosystem: Kubernetes et al          | Sebastian Scheele               |
-| 15:30 | 30min | HPC integration with Nextflow using Singularity | Michael Bauer, Paolo Di Tommaso |
-|       | 30min | Coffee Break                                                                     ||
+| 15:30 | 15min | Workflow Orchestration with Nextflow            | Paolo Di Tommaso                |
+| 15:45 | 15min | Workload Reproducibility using Containers       | Christian Kniep                 |
+| 16:00 | 30min | Coffee Break                                                                     ||
 | 16:30 | 40min | Current state of HPC-workloads in the cloud     | Burak Yenier, Wolfgang Gentzsch |
-| 17:10 | 10min | Reproducibility of workloads                    | Christian Kniep                 |
+| 17:00 | 10min | Reproducible Orchestration with Nextflow        | Paolo Di Tommaso                |
 | 17:20 | 10min | User-land performance and customisation         | Christian Kniep                 |
 | 17:30 | 30min | Q&A, Panel Discussion                           | All                             |
 
@@ -40,7 +55,8 @@ Christian likes to explore new emerging trends by containerizing them first and 
 
 **Holger Gantikow** studied Computer Science at the University of Furtwangen and is working as a Senior Systems Engineer for Science + Computing AG in Tübingen since 2009. In his work, he deals with the complexity of heterogenous systems in CAE computation environments and servers customers utilizing technical and scientific applications. Ever since he started his professional career, virtualization and how it changes IT infrastructures gained his interest. This includes especially cloud management systems like OpenNebula and OpenStack, as well as the recently rediscovered container-based virtualization technology based on Docker.
 
-**Michael Bauer** is an undergraduate student at the University of Michigan, where he is studying Computer Science & Engineering with a focus on computer architecture. He has spent the last 9 months working at the GSI national laboratory in Darmstadt, Germany, as an experimental systems researcher. For the last several months, he has been a developer of Singularity, an open source container solution designed for HPC.
+<!--**Michael Bauer** is an undergraduate student at the University of Michigan, where he is studying Computer Science & Engineering with a focus on computer architecture. He has spent the last 9 months working at the GSI national laboratory in Darmstadt, Germany, as an experimental systems researcher. For the last several months, he has been a developer of Singularity, an open source container solution designed for HPC.
+-->
 
 **Paolo Di Tommaso** is research software engineer at Center for Genomic Regulation, Spain. He is a 20 years experienced software developer, software architecture designer and advocate of open source software. His main interests are parallel programming, HPC and cloud computing. Paolo is B.Sc. in Computer Science and M.Sc. in Bioinformatics. He is the creator and project leader of the Nextflow workflow framework
 
