@@ -36,7 +36,7 @@ The initial agenda reads as follows, the agenda is subject to refinements.
 | 14:00 | 5min  | Introduction                                    | Christian Kniep                 |
 | 14:05 | 25min | Linux Containers Technology & Runtimes          | Holger Gantikow, Michael Bauer  |
 | 14:30 | 30min | Docker Ecosystem: Engine, Swarm, Compose        | Christian Kniep                 |
-| 15:00 | 30min | Non-Docker Ecosystem: Kubernetes et al          | Sebastian Scheele               |
+| 15:00 | 30min | Non-Docker Ecosystem: Kubernetes et al          | Luk Burchard                    |
 | 15:30 | 15min | Workflow Orchestration with Nextflow            | Paolo Di Tommaso                |
 | 15:45 | 15min | Workload Reproducibility using Containers       | Christian Kniep                 |
 | 16:00 | 30min | Coffee Break                                                                     ||
@@ -59,6 +59,6 @@ Christian likes to explore new emerging trends by containerizing them first and 
 
 **Paolo Di Tommaso** is research software engineer at Center for Genomic Regulation, Spain. He is a 20 years experienced software developer, software architecture designer and advocate of open source software. His main interests are parallel programming, HPC and cloud computing. Paolo is B.Sc. in Computer Science and M.Sc. in Bioinformatics. He is the creator and project leader of the Nextflow workflow framework
 
-**Sebastian Scheele** is a co-founder of Loodse, a software company that has developed Kubermatic - a managed Master as a Service for the orchestration of multiple Kubernetes clusters. Moreover, Loodse provides consulting and training services in the area of cloud native strategies. Sebastian has been qualified an official Google Cloud trainings partner. Before, Sebastian worked as a software developer for SAP. He holds a degree in Computer Science from the University of Applied Science and Arts of Dortmund.
+**Luk Burchard** is a Software Engineer at Loodse working on the Kubermatic Container Engine, a Kubernetes automation system. Besides that, he studies Computer Science at TU-Berlin, is a Kubernetes contributor and is passionate about cluster management technologies.
 
 **Wolfgang Gentzsch** is co-founder & president of the UberCloud Community and Marketplace for engineers and scientists to discover, try, and buy computing power on demand in the cloud. He is also Co-Chairman of the ISC Cloud & Big Data conference series. Wolfgang was Director At-Large of the Board of Directors of the Open Grid Forum, and an advisor to the EU projects DEISA and EUDAT. Before he directed the German D-Grid Initiative, was a professor of computer science at Duke in Durham, NC State in Raleigh, and the University of Applied Sciences in Regensburg, and a visiting scientist at RENCI, the Renaissance Computing Institute at UNC Chapel Hill. Wolfgang was a member of the US President's Council of Advisors for Science and Technology, PCAST, and held leading positions at Sun, MCNC, Gridware, and Genias Software.
