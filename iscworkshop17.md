@@ -10,7 +10,7 @@ permalink: /isc/
 This years 'Linux Container' workshop at the ISC 2017 is called: <br>
  **Linux Container to optimise IT Infrastructure and High-Performance Workloads**.
  
-It is held after the International Supercomputing Conference in Frankfurt on **June 22rd from 2PM to 6PM** at the Marriott Hotel.
+It is held after the International Supercomputing Conference in Frankfurt on **June 22nd from 2PM to 6PM** at the Marriott Hotel.
 
 ## Previous ISC Workshops
 
@@ -47,7 +47,9 @@ The initial agenda reads as follows, the agenda is subject to refinements.
 
 ## Speakers
 
-**Burak Yenier**, CEO and Co-Founder of UberCloud, is an expert in the development and management of large-scale, high availability systems, and in many aspects of the cloud delivery model including information security and capacity planning. He has been working on Software as a Service since early 2000 and held management positions in software development and operations in several companies. In his most recent role as the Vice President of Operations Burak managed the multi-site datacenter and digital payment operations of a financial Software as a Service technology company located in Silicon Valley where he built cloud infrastructure and operations from scratch and for scale. @BurakYenier and http://www.linkedin.com/in/buraky.
+**Burak Yenier** is the CEO of UberCloud. He is a thought-leader and speaks about High Performance Computing, Cloud and Software Containers. <br>
+Burak is an expert in large-scale, high availability systems and cloud. As an early SaaS proponent, Burak's management experience spans software development and operations. His most recent role was as the Vice President of Operations of a Silicon Valley SaaS company in banking. Burak built the company's cloud infrastructure and operations from scratch and for scale. He also managed all the data centers and the digital payment operations.<br>
+Burak co-founded UberCloud in 2012.  UberCloud has developed  over 150 case-studies in every conceivable area of engineering simulation. The company publishes award-winning blueprints and best practices in cloud and technical computing. Burak simplifies the lives of engineers with powerful, easy to use compute environments in the Cloud. @BurakYenier https://www.linkedin.com/in/buraky/
 
 **Christian Kniep** With a 10y journey rooted in the HPC parts of the german automotive industry, Christian started to support CAE applications and VR installations.<br>
 After getting bored with the small pieces, he became the InfiniBand go-to-guy while operating a 4000 node crash-test cluster and pivoted to the R&D department of Bulls BXI interconnect. When told at a conference that HPC can not learn anything from the emerging Cloud and BigData companies, he became curious and is now leading the containerization effort at Gaikai Inc. (part of Sony Interactive Entertainment).<br>
