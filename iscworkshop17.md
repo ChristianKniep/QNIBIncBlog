@@ -31,19 +31,25 @@ It is held after the International Supercomputing Conference in Frankfurt on **J
 
 The initial agenda reads as follows, the agenda is subject to refinements.
 
-| Slot# |  Time |  Title                                          | Speaker                         |
-|:-----:|:-----:|:------------------------------------------------|:--------------------------------|
-| 14:00 | 5min  | Introduction                                    | Christian Kniep                 |
-| 14:05 | 25min | Linux Containers Technology & Runtimes          | Holger Gantikow, Michael Bauer  |
-| 14:30 | 30min | Docker Ecosystem: Engine, Swarm, Compose        | Christian Kniep                 |
-| 15:00 | 30min | Non-Docker Ecosystem: Kubernetes et al          | Luk Burchard                    |
-| 15:30 | 15min | Workflow Orchestration with Nextflow            | Paolo Di Tommaso                |
-| 15:45 | 15min | Workload Reproducibility using Containers       | Christian Kniep                 |
-| 16:00 | 30min | Coffee Break                                                                     ||
-| 16:30 | 40min | Current state of HPC-workloads in the cloud     | Burak Yenier, Wolfgang Gentzsch |
-| 17:00 | 10min | Reproducible Orchestration with Nextflow        | Paolo Di Tommaso                |
-| 17:20 | 10min | User-land performance and customisation         | Christian Kniep                 |
-| 17:30 | 30min | Q&A, Panel Discussion                           | All                             |
+| Slot#  |  Time  |  Title                                                                    | Speaker                                        |
+|:--------:|:--------:|:---------------------------------------------------------------|:---------------------------------------------|
+| 14:00 | 5min   | Introduction                                                         | Christian Kniep                              |
+| 14:05 | 25min | Linux Containers Technology & Runtimes          | Holger Gantikow, Michael Bauer   |
+| 14:30 | 20min | Docker Ecosystem: Engine, Swarm, Compose  | Christian Kniep                              |
+| 14:50 | 20min | Non-Docker Ecosystem: Kubernetes et al          | Luk Burchard                                 |
+| 15:10 | 15min | Workflow Orchestration with Nextflow                | Paolo Di Tommaso                         |
+| 15:25 | 35min | Use-Cases for Containers today                        | All                                                    |
+|           |            | - Running auxiliary datacenter services             | Christian Kniep                               |
+|           |            | - Keep usability when running workloads in the cloud | Burak Yenier |
+|           |            | - Reproducible Orchestration with Nextflow | Paolo Di Tommaso |
+| 16:00 | 30min | Coffee Break                                                                                                             ||
+| 16:30 | 30min | Current state of HPC-workloads in the cloud     | Burak Yenier, Wolfgang Gentzsch |
+| 17:00 | 30min | Outlook/ Lightning Talks                                     | All                        |
+|           |            | - User-land performance and customisation      | Christian Kniep                              |
+|           |            | - LinuxKit & the Moby Project                             | Christian Kniep                              |
+| 17:30 | 30min | Q&A, Panel Discussion                                      | All                                                   |
+
+## 
 
 ## Speakers
 
