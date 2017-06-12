@@ -46,10 +46,10 @@ The initial agenda reads as follows, the agenda is subject to refinements.
 | 16:30 | 30min | Current state of HPC-workloads in the cloud     | Burak Yenier, Wolfgang Gentzsch |
 | 17:00 | 30min | Outlook/ Lightning Talks                                     | All                        |
 |           |            | - User-land performance and customisation      | Christian Kniep                              |
-|           |            | - LinuxKit & the Moby Project                             | Christian Kniep                              |
+|           |            | - The future of Singularity                                  | Michael Bauer, Greg Kurtzner       |
+|           |            | - What's next in the Docker Ecosystem             | Christian Kniep                              |
+|           |            | - Kubernetes Outlook                                         | Luk Burchard                                 |
 | 17:30 | 30min | Q&A, Panel Discussion                                      | All                                                   |
-
-## 
 
 ## Speakers
 
