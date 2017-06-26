@@ -7,10 +7,10 @@ permalink: /isc/
 # ISC 2017 Workshop 
 
 
-This years 'Linux Container' workshop at the ISC 2017 is called: <br>
+The 'Linux Container' workshop at the ISC 2017 was called: <br>
  **Linux Container to optimise IT Infrastructure and High-Performance Workloads**.
  
-It is held after the International Supercomputing Conference in Frankfurt on **June 22nd from 2PM to 6PM** at the Marriott Hotel.
+It was held after the International Supercomputing Conference in Frankfurt on **June 22nd from 2PM to 6PM** at the Marriott Hotel.
 
 ## Previous ISC Workshops
 
@@ -27,29 +27,33 @@ It is held after the International Supercomputing Conference in Frankfurt on **J
 {% endfor %}
 </ul>
 
+## Thank you participants and speakers!
+The workshop was so packed, we could not even close the doors.<br>
+<img src="/data/isc2017/isc-fully-packed.jpg" alt="Fully packed" height="300"> <img src="/data/isc2017/isc-fully-packed-2.jpg" alt="Fully packed" height="300"><img src="/data/isc2017/isc-tech.png" alt="ISC Tech" height="300">
+
+
+A big thanks to all attendees and the speakers, without whom it would not be possible. If you liked the workshop make sure to spread the word, so that we have a 4th workshop next year.
+
 ## Agenda
 
 The initial agenda reads as follows, the agenda is subject to refinements.
 
-| Slot#  |  Time  |  Title                                                                    | Speaker                                        |
-|:--------:|:--------:|:---------------------------------------------------------------|:---------------------------------------------|
-| 14:00 | 5min   | Introduction                                                         | Christian Kniep                              |
-| 14:05 | 25min | Linux Containers Technology & Runtimes          | Holger Gantikow, Michael Bauer   |
-| 14:30 | 20min | Docker Ecosystem: Engine, Swarm, Compose  | Christian Kniep                              |
-| 14:50 | 20min | Non-Docker Ecosystem: Kubernetes et al          | Luk Burchard                                 |
-| 15:10 | 15min | Workflow Orchestration with Nextflow                | Paolo Di Tommaso                         |
-| 15:25 | 35min | Use-Cases for Containers today                        | All                                                    |
-|           |            | - Running auxiliary datacenter services             | Christian Kniep                               |
-|           |            | - Keep usability when running workloads in the cloud | Burak Yenier |
-|           |            | - Reproducible Orchestration with Nextflow | Paolo Di Tommaso |
-| 16:00 | 30min | Coffee Break                                                                                                             ||
-| 16:30 | 30min | Current state of HPC-workloads in the cloud     | Burak Yenier, Wolfgang Gentzsch |
-| 17:00 | 30min | Outlook/ Lightning Talks                                     | All                        |
-|           |            | - User-land performance and customisation      | Christian Kniep                              |
-|           |            | - The future of Singularity                                  | Michael Bauer, Greg Kurtzner       |
-|           |            | - What's next in the Docker Ecosystem             | Christian Kniep                              |
-|           |            | - Kubernetes Outlook                                         | Luk Burchard                                 |
-| 17:30 | 30min | Q&A, Panel Discussion                                      | All                                                   |
+| Slot#  |  Time  |  Title                                         | Youtube | Slides |  Speaker                                        |
+|:--------:|:--------:|:----------------------------------------:|:-----------:|:------------|:---------------------------------------------|
+| 1 | 5min   | Introduction | [bit broken audio](https://www.youtube.com/watch?v=WmnVGDSnImU&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=1)  | [pdf](/data/isc2017/01-introduction.pdf) | Christian Kniep   |
+| 2 | 25min | Linux Containers Technology & Runtimes | [flickering video](https://www.youtube.com/watch?v=hnbNCehCpjg&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=2) |  [pdf](/data/isc2017/02-runtime-intro.pdf)   | Holger Gantikow, Michael Bauer   |
+| 3 | 20min | Singularity Introduction | [link](https://www.youtube.com/watch?v=29NLgM9fnh4&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=3)  | soon | Michael Bauer                              |
+| 4 | 15min | Non-Docker Ecosystem: Kubernetes | [link](https://www.youtube.com/watch?v=oboASwdtnlM&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=4)  | soon | Luk Burchard                                 |
+| 6 | 15min | Workflow Orchestration with Nextflow | [link](https://www.youtube.com/watch?v=bN2tz0dn-Yg&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=5)  | soon | Paolo Di Tommaso    |
+| 7 |  15min  | Running Auxiliary Datacenter Services | [link](https://www.youtube.com/watch?v=Mz4p4lG-FdQ&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=11)  |  [pdf](/data/isc2017/07-dc-services.pdf) | Christian Kniep                             |
+| 8  |   8min   | Short Introduction to HPC Workloads in the Cloud | [link](https://www.youtube.com/watch?v=eecF_n9O2Z8&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=6) | soon | Burak Yenier  |
+|  | 30min | Coffee Break                                                                                                             ||
+| 8 | 30min | Discussion of HPC-workloads in the Cloud | [link](https://www.youtube.com/watch?v=5mdmnB9GpeA&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=7)    | soon | Burak Yenier      |
+| 9 |  10min  | The Future of Singularity | [link](https://www.youtube.com/watch?v=HI2nCYegPpc&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=8)  | soon | Michael Bauer         |
+| 10 |   5min   | User-land Performance and Customisation | [link](https://www.youtube.com/watch?v=bVb4-oHAwck&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=9)  |  [pdf](/data/isc2017/10-userland-opt.pdf)    | Christian Kniep  | 
+|  11 |              | What's Next in the Docker Ecosystem             |  | [pdf](/data/isc2017/11-whats-next.pdf) | Christian Kniep                              |
+|  12 |  8min  | Kubernetes Outlook | [link](https://www.youtube.com/watch?v=8facee9HFFo&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=12)  | soon | Luk Burchard                                 |
+| 13 |  10min | Q&A about Singularity | [link](https://www.youtube.com/watch?v=1y5ZeqnZ2A0&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=11) | no slides | Greg Kurtzer         |
 
 ## Speakers
 
