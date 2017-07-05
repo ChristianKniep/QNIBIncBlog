@@ -44,7 +44,7 @@ The initial agenda reads as follows, the agenda is subject to refinements.
 | 2 | 25min | Linux Containers Technology & Runtimes | [flickering video](https://www.youtube.com/watch?v=hnbNCehCpjg&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=2) |  [pdf](/data/isc2017/02-runtime-intro.pdf)   | Holger Gantikow, Michael Bauer   |
 | 3 | 20min | Singularity Introduction | [link](https://www.youtube.com/watch?v=29NLgM9fnh4&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=3)  | [pdf](/data/isc2017/03-singularity.pdf) | Michael Bauer                              |
 | 4 | 15min | Non-Docker Ecosystem: Kubernetes | [link](https://www.youtube.com/watch?v=oboASwdtnlM&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=4)  | soon | Luk Burchard                                 |
-| 6 | 15min | Workflow Orchestration with Nextflow | [link](https://www.youtube.com/watch?v=bN2tz0dn-Yg&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=5)  | soon | Paolo Di Tommaso    |
+| 6 | 15min | Workflow Orchestration with Nextflow | [link](https://www.youtube.com/watch?v=bN2tz0dn-Yg&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=5)  |  [pdf](/data/isc2017/06-nextflow.pdf) | Paolo Di Tommaso    |
 | 7 |  15min  | Running Auxiliary Datacenter Services | [link](https://www.youtube.com/watch?v=Mz4p4lG-FdQ&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=11)  |  [pdf](/data/isc2017/07-dc-services.pdf) | Christian Kniep                             |
 | 8  |   8min   | Short Introduction to HPC Workloads in the Cloud | [link](https://www.youtube.com/watch?v=eecF_n9O2Z8&list=PLfE3_wJGw9KTE3S3jlCHH5epTyRzxAqHL&index=6) | improvised Q&A | Burak Yenier  |
 |  | 30min | Coffee Break                                                                                                             ||
