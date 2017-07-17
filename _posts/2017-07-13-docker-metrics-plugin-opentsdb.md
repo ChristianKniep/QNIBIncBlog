@@ -6,7 +6,7 @@ date: 2017-07-13
 tags: eng blog docker
 ---
 
-Recently Docker released it 17.06 version of the Docker Engine ([Announcement](https://blog.docker.com/2017/06/announcing-docker-17-06-community-edition-ce/)) and in there is the new plugin type 'Metrics'.
+Recently Docker released its 17.06 version of the Docker Engine ([Announcement](https://blog.docker.com/2017/06/announcing-docker-17-06-community-edition-ce/)) and in there is the new plugin type 'Metrics'.
 
 The example they provide just copies over the internal Prometheus unix socket to an external HTTP endpoint.
 
@@ -45,8 +45,19 @@ builder_builds_failed_total{reason="unknown_instruction_error"} 0
 
 ## OpenTSDB Metrics Plugin
 
-I feel the vibe in Prometheus, but for some things I like the traditional push model more, as the endpoint does not know when a potential collector will scrape the endpoint.
-Even though for the internal metrics this is not as important, but maybe some day container metrics will also be available. 
+I feel the vibe in Prometheus, but for some things I like the <s>traditional</s> push model more, as the endpoint does not know when a potential collector will scrape the endpoint.
+
+**&lt;UPDATE&gt;**<br>
+I had a discussion with a colleague about the word traditional there, which got me thinking (thanks for the brain-challenge Stephan!).<br>
+There are a ton of blog post about it ([Prometheus and the Debate Over ‘Push’ Versus ‘Pull’ Monitoring](), [Pull doesn't scale - or does it?](https://prometheus.io/blog/2016/07/23/pull-does-not-scale-or-does-it/) and a nice [video from SREcon about monitoring at scale](https://www.usenix.org/conference/srecon17americas/program/presentation/wilkinson)) and I get that it is nice to monitor stuff using the pull model. <br>
+I am afraid I have to put my perspective into a distinct blog post some time. In short:
+
+- **Pull if we talk about long lived, regular, static metrics**
+- **Push in case the metric might go away quickly, you want to be explicit about the timestamp, ....** 
+
+**&lt;/UPDATE&gt;**
+
+For the internal metrics this might not be super important (long lived, regular, static metric), but maybe some day container metrics will also be available.
 
 Anyhow, I created an OpenTSDB plugin: [qnib/docker-plugin-metrics-opentsdb](https://github.com/qnib/docker-plugin-metrics-opentsdb)
 
@@ -54,7 +65,7 @@ This plugin connects to the `metrics.sock` provided by the plugin system and tra
 
 ### InfluxDB Stack
 
-To be able to throw the metrics somewhere an InfluxDB stack with enable OpenTSDB endpoint will do.
+To be able to throw the metrics somewhere, an InfluxDB stack with enable OpenTSDB endpoint will do the trick.
 
 ```bash
 $ cat docker-compose.yml
@@ -99,7 +110,7 @@ ID                  NAME                                         DESCRIPTION    
 4cf98db8588c        cpuguy83/docker-metrics-plugin-test:latest   prometheus collector plugin          true
 c9ff581daaba        qnib/docker-plugin-metrics-opentsdb:latest   Plugin to push metrics to OpenTSDB   false
 ```
-The configuration can tweak where the OpenTSDB endpoint is exposed.
+The configuration can be changed to adjust the expected OpenTSDB endpoint.
 
 ```json
 {
@@ -136,7 +147,7 @@ $
 
 ## Grafana
 
-Having Grafana in the `docker-compose.yml` stack, you can reach it under [localhost:3000](http://localhost:3000/dashboard/db/docker-engine) (admin/admin).
+Having Grafana in the `docker-compose.yml` stack, you can reach an examplary dashboard under [localhost:3000](http://localhost:3000/dashboard/db/docker-engine) (admin/admin).
 
 ![](/pics/2017-07-13/grafana.png)
 
