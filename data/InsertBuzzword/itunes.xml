@@ -166,8 +166,8 @@
       <itunes:subtitle>How did commoditization changed HPC over the years and how does it influences non-HPC.</itunes:subtitle>
       <itunes:author>Christian Kniep</itunes:author>
       <itunes:summary>How did commoditization changed HPC over the years and how does it influences non-HPC.</itunes:summary>
-      <itunes:image href="http://qnib.org/insert-buzzword/episode/audio/cover.png" />
-      <enclosure url="http://qnib.org/insert-buzzword/episode/audio/ib12.mp3" length="77.165.606" type="audio/mpeg" />
+      <itunes:image href="http://qnib.org/insert-buzzword/img/insert-buzzword-hpcac-logo.png" />
+      <enclosure url="http://qnib.org/insert-buzzword/episodes/ib12.mp3" length="77.165.606" type="audio/mpeg" />
       <guid>12</guid>
       <pubDate>Tue, 29 September 2017 21:30:00 CEST</pubDate>
       <itunes:duration>4821.0</itunes:duration>
