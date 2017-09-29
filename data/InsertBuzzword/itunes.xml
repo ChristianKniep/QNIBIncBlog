@@ -150,5 +150,27 @@
       <pubDate>Tue, 20 December 2016 10:00:00 CEST</pubDate>
       <itunes:duration>3720.0</itunes:duration>
     </item>
+    <item>
+      <title>IT Operations w/ Albert</title>
+      <itunes:subtitle>Talk about IT Operations with Albert.</itunes:subtitle>
+      <itunes:author>Christian/Hagen</itunes:author>
+      <itunes:summary>Talk about IT Operations with Albert.</itunes:summary>
+      <itunes:image href="http://qnib.org/insert-buzzword/episode/audio/cover.png" />
+      <enclosure url="http://qnib.org/insert-buzzword/episode/audio/ib11.mp3" length="72.909.037" type="audio/mpeg" />
+      <guid>11</guid>
+      <pubDate>Tue, 15 September 2017 18:00:00 CEST</pubDate>
+      <itunes:duration>4560.0</itunes:duration>
+    </item>
+    <item>
+      <title>High Performance Computing w/ DK</title>
+      <itunes:subtitle>How did commoditization changed HPC over the years and how does it influences non-HPC.</itunes:subtitle>
+      <itunes:author>Christian Kniep</itunes:author>
+      <itunes:summary>How did commoditization changed HPC over the years and how does it influences non-HPC.</itunes:summary>
+      <itunes:image href="http://qnib.org/insert-buzzword/episode/audio/cover.png" />
+      <enclosure url="http://qnib.org/insert-buzzword/episode/audio/ib12.mp3" length="77.165.606" type="audio/mpeg" />
+      <guid>12</guid>
+      <pubDate>Tue, 29 September 2017 21:30:00 CEST</pubDate>
+      <itunes:duration>4821.0</itunes:duration>
+    </item>
   </channel>
 </rss>
