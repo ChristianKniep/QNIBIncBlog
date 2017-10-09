@@ -190,9 +190,20 @@
       <itunes:summary>Sweep up the latest news in Kafka,Elasticsearch and HPC</itunes:summary>
       <itunes:image href="http://qnib.org/insert-buzzword/img/logo.png" />
       <enclosure url="http://qnib.org/insert-buzzword/episodes/ib14.mp3" length="56.013.312" type="audio/mpeg" />
-      <guid>13</guid>
+      <guid>14</guid>
       <pubDate>Tue, 1 October 2017 18:00:00 CEST</pubDate>
       <itunes:duration>3479.0</itunes:duration>
+    </item>
+    <item>
+      <title>IB-News No2</title>
+      <itunes:subtitle>Wrap up the week talking about KSQL and stuff.</itunes:subtitle>
+      <itunes:author>Christian Kniep/Hagen Tönnies</itunes:author>
+      <itunes:summary>Wrap up the week talking about KSQL and stuff.</itunes:summary>
+      aCitunes:image href="http://qnib.org/insert-buzzword/img/logo.png" />
+      <enclosure url="http://qnib.org/insert-buzzword/episodes/ib15.mp3" length="30.887.827" type="audio/mpeg" />
+      <guid>15</guid>
+      <pubDate>Tue, 9 October 2017 18:00:00 CEST</pubDate>
+      <itunes:duration>1929.0</itunes:duration>
     </item>
   </channel>
 </rss>
