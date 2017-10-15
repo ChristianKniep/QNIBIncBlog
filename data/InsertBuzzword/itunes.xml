@@ -205,5 +205,16 @@
       <pubDate>Tue, 9 October 2017 18:00:00 CEST</pubDate>
       <itunes:duration>1929.0</itunes:duration>
     </item>
+    <item>
+      <title>IB-News No3</title>
+      <itunes:subtitle>This week in Buzzwords looking forward to the DockerConEU and talk about JVM in container technologies.</itunes:subtitle>
+      <itunes:author>Christian Kniep/Hagen Tönnies</itunes:author>
+      <itunes:summary>This week in Buzzwords looking forward to the DockerConEU and talk about JVM in container technologies.</itunes:summary>
+      aCitunes:image href="http://qnib.org/insert-buzzword/img/logo.png" />
+      <enclosure url="http://qnib.org/insert-buzzword/episodes/ib16.mp3" length="43.486.995" type="audio/mpeg" />
+      <guid>16</guid>
+      <pubDate>Sun, 15 October 2017 12:00:00 CEST</pubDate>
+      <itunes:duration>2717.0</itunes:duration>
+    </item>
   </channel>
 </rss>
