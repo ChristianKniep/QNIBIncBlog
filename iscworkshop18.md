@@ -7,10 +7,9 @@ permalink: /isc/
 # ISC 2018 Workshop
 
 
-The 'Linux Container' workshop at the ISC 2018 was called: <br>
- **High Performance Container Workshop**.
+The 'Linux Container' workshop at the ISC 2018 is called: **High Performance Container Workshop**
 
-It was held after the International Supercomputing Conference in Frankfurt on **June 28nd from 9AM to 6PM** at the Marriott Hotel.
+It is held as part of the International Supercomputing Conference in Frankfurt on **June 28nd from 9AM to 6PM** at the Marriott Hotel.
 
 ## Previous ISC Workshops
 
@@ -36,20 +35,18 @@ HPC, cloud, Docker, virtualization, container, software stack, mpi, monitoring, 
 
 ## Agenda
 
--  9:00 - 9:05  Introduction
--  9:05 - 9:30  Container Technology/Engine Architecture 101, Holger
--  9:30 - 10:00 HPC Use-Cases and Current Solutions, Christian
-- 10:00 - 10:30 break
-- 10:30 - 11:15 HPC in the cloud, Burak
-- 11:15 - 12:00 Challenges in HPC and Big Data environments, Christian
-- 12:00 - 13:00 lunch
-- 13:00 - 13:45 Using remote GPUs with rCUDA, Federico
-- 13:45 - 14:30 Strip-down, customized Linux distribution with LinuxKit, Justin
-- 14:30 - 15:15 How BeeGFS secures shared file-systems w/ containers, Marco
-- 15:15 - 16:00 User-land optimization, Christian
-- 16:00 - 16:30 break
-- 16:30 - 17:15 Bioscience computation using containerized workflows, Alexander
-- 17:15 - 18:00 Student Cluster Competition Team Recap, Michael
+| Slot# |  Title                                   | Material | Speaker             |  Company |
+|:-----:|:-----------------------------------------|:---------|:---------------------|:--------:|
+| 1 | Container Technology/Engine Architecture 101 | [slides](/data/isc2018/ISC2018_Gantikow_ContainerTechnology-EngineArchitecture101.pdf) | Holger Gantikow | Atos |
+| 2 | HPC Problem Statement and current Solutions  | [slides](/data/isc2018/) | Christian Kniep | Docker |
+| 3 | HPC in the cloud                             | [slides](/data/isc2018/UberCloud.pdf) | Burak Yenier | UberCloud |
+| 4 | Ideas towards High Performance Containers    | [slides](/data/isc2018/high-performance-containers_ideas.pdf)| Christian Kniep | Docker |
+| 5 | Using remote GPUs with rCUDA                 | [slides](/data/isc2018/rCUDA_talk_v3.pdf) | Federico Silla  | rCUDA |
+| 6 | Strip-down, customized Linux distribution with LinuxKit  | [slides](/data/isc2018/LinuxKit.pdf)| Justin Cormack  | Docker |
+| 7 | How BeeGFS secures shared file-systems w/ containers  | | Marco Merkel | ThinkParQ |
+| 8 | RoCE and InfiniBand Container Status         | [slides](/data/isc2018/roce-containers.pdf)| Dror Goldenberg | Mellanox |
+| 10 | Bioscience computation using containerized workflows  | [slides](https://slides.com/apeltzer/deck?token=DpD3s-CV) | Alexander Peltzer | QBiC |
+| 11 | Student Cluster Competition Team Recap      | | Leonhard Reichenbach | DKRZ |
 
 ## Targeted Audience
 Software developers, users, and managers of data center and cloud infrastructure and applications.
@@ -58,7 +55,7 @@ Software developers, users, and managers of data center and cloud infrastructure
 100
 
 ## Expected Outcome
-By attending the participants will gain an understanding about the drivers behind Linux Containers, the different ecosystems and how they fundamentally work. Furthermore, the workshop will shades light on HPC and enterprise aspects like rCUDA, BigData, how to speed up development cycles. Panel discussions will dive into pitfalls and misconceptions and provides an extensive Q&A.
+By attending the participants will gain an understanding about the drivers behind Linux Containers, the different ecosystems and how they fundamentally work. Furthermore, the workshop will shades light on HPC and enterprise aspects like rCUDA, BigData and how to speed up development cycles. Panel discussions will dive into pitfalls and misconceptions and provides an extensive Q&A.
 
 ## Speaker
 
@@ -68,18 +65,29 @@ Christian Kniep is a Technical Account Manager at Docker, Inc. With a 10 year jo
 ### Burak Yenier
 Burak Yenier CEO and Co-Founder of UberCloud, is an expert in the development and management of large-scale, high availability systems, and in many aspects of the cloud delivery model including information security and capacity planning. He has been working on Software as a Service since early 2000 and held management positions in software development and operations in several companies. In his most recent role as the Vice President of Operations Burak managed the multi-site datacenter and digital payment operations of a financial Software as a Service technology company located in Silicon Valley where he built cloud infrastructure and operations from scratch and for scale.
 
-### Michael Kuhn
-Michael Kuhn is a postdoctoral researcher in the Scientific Computing group at Universität Hamburg, where he also received his doctoral degree in computer science in 2015. He conducts research in the area of high performance I/O with a special focus on I/O interfaces and data reduction techniques. Other interests of his include file systems and high performance computing in general.
+### Leohard Reichenbach
+Leonhard Reichenbach is studying Computing in Science with a focus on
+physics at Universität Hamburg. He is interested in scientific
+high-performance computing and participates in this years ISC-HPCAC
+Student Cluster Competition (SCC).
+
+### Dror Goldenberg
+Dror joined Mellanox in 2000 as an architect to work on exciting network innovations. Dror drove silicon and system architecture of multiple generations of Network Interfaces Cards, Switches and SoCs. Dror’s main focus nowadays is on software architecture, enabling network accelerations of cool technologies like artificial intelligence, HPC, cloud, storage, big data, security and more.
 
 ### Holger Gantikow
 Holger Gantikow studied Computer Science at the University of Furtwangen and is working as a Senior Systems Engineer for Science + Computing AG in Tuebingen since 2009. In his work, he deals with the complexity of heterogenous systems in CAE computation environments and servers customers utilizing technical and scientific applications. Ever since he started his professional career, virtualization and how it changes IT infrastructures gained his interest. This includes especially cloud management systems like OpenNebula and OpenStack, as well as the recently rediscovered container-based virtualization technology based on Docker.
 
 ### Federico Silla
-Federicos research addresses high performance on-chip and off-chip interconnection networks as well as distributed memory systems and remote GPU virtualization mechanisms. The different papers he has published so far provide an H-index impact factor equal to 26 according to Google Scholar. Additionally, he is leading and coordinating the development and advancement of the rCUDA remote GPU virtualization middleware since it began in 2008. The rCUDA technology, which enables remote virtualized access to CUDA GPUs, is exclusively and entirely developed by Technical University of Valencia. Moreover, he is leading and coordinating the development of other virtualization technologies. He was also co-founder of the "Remote Libraries" company, which was aimed at provide technical support for the rCUDA technology.
+Federico Silla received the PhD degree in Computer Engineering from
+Universitat Politecnica de Valencia, Spain, where he is currently an
+associate professor. He has led the rCUDA project since it began in
+2008. He has published more than 150 conference and journal papers.
 
 ### Marco Merkel
+Marco is since almost 3 years the Vice President worldwide sales & consulting for BeeGFS at ThinkParQ GmbH in Kaiserslautern. Main focus of his position is the international distribution of BeeGFS and sell consulting services into High Performance Computing, AI, Deep Learning, HPC Cloud Services, Bioinformatics, CFD, Finance, Oil & Gas, Media & Entertainment market segments. Key to success is the competent, motivated ThinkParQ team in the background and the development of strategic OEM vendors relations, planning and realizations of business models & solution building blocks for channel partner and lining up flagship end customer projects.
 
 ### Alexander Peltzer
+Alexander Peltzer studied Bioinformatics at the University of Tuebingen and is working as a Bioinformatics research scientist at the Quantitative Biology Center (QBiC) in Tübingen since 2017. During his Ph.D he worked on complex genomics applications and analysis pipelines and applied container based technologies such as Docker to resolve dependency issues in the field of bioinformatics.
 
 ### Justin Cormack
 Justin Cormack is an engineer at Docker. He got interested in system software while working on operations, trying to stop it breaking, and became a C programmer by necessity not design. He has recently been working on building unikernels, improving usability of security, and distributed systems. He is a maintainer on the open source Docker project. Justin tweets @justincormack
