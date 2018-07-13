@@ -38,7 +38,7 @@ HPC, cloud, Docker, virtualization, container, software stack, mpi, monitoring, 
 | Slot# |  Title                                   | Material | Speaker             |  Company |
 |:-----:|:-----------------------------------------|:---------|:---------------------|:--------:|
 | 1 | Container Technology/Engine Architecture 101 | [slides](/data/isc2018/ISC2018_Gantikow_ContainerTechnology-EngineArchitecture101.pdf) | Holger Gantikow | Atos |
-| 2 | HPC Problem Statement and current Solutions  | [slides](/data/isc2018/) | Christian Kniep | Docker |
+| 2 | HPC Problem Statement and current Solutions  | [slides](/data/isc2018/high-performance-containers_problems-and-current-workarounds.pdf) | Christian Kniep | Docker |
 | 3 | HPC in the cloud                             | [slides](/data/isc2018/UberCloud.pdf) | Burak Yenier | UberCloud |
 | 4 | Ideas towards High Performance Containers    | [slides](/data/isc2018/high-performance-containers_ideas.pdf)| Christian Kniep | Docker |
 | 5 | Using remote GPUs with rCUDA                 | [slides](/data/isc2018/rCUDA_talk_v3.pdf) | Federico Silla  | rCUDA |
