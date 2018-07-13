@@ -7,9 +7,9 @@ permalink: /isc/
 # ISC 2018 Workshop
 
 
-The 'Linux Container' workshop at the ISC 2018 is called: **High Performance Container Workshop**
+The 'Linux Container' workshop at the ISC 2018 was called: **High Performance Container Workshop**
 
-It is held as part of the International Supercomputing Conference in Frankfurt on **June 28nd from 9AM to 6PM** at the Marriott Hotel.
+It was held as part of the International Supercomputing Conference in Frankfurt on **June 28nd from 9AM to 6PM** at the Marriott Hotel.
 
 ## Previous ISC Workshops
 
@@ -43,10 +43,10 @@ HPC, cloud, Docker, virtualization, container, software stack, mpi, monitoring, 
 | 4 | Ideas towards High Performance Containers    | [slides](/data/isc2018/high-performance-containers_ideas.pdf)| Christian Kniep | Docker |
 | 5 | Using remote GPUs with rCUDA                 | [slides](/data/isc2018/rCUDA_talk_v3.pdf) | Federico Silla  | rCUDA |
 | 6 | Strip-down, customized Linux distribution with LinuxKit  | [slides](/data/isc2018/LinuxKit.pdf)| Justin Cormack  | Docker |
-| 7 | How BeeGFS secures shared file-systems w/ containers  | | Marco Merkel | ThinkParQ |
+| 7 | How BeeGFS secures shared file-systems w/ containers  | [slides](/data/isc2018/BeeGFS_ISC_Dockers_18.pdf) | Marco Merkel | ThinkParQ |
 | 8 | RoCE and InfiniBand Container Status         | [slides](/data/isc2018/roce-containers.pdf)| Dror Goldenberg | Mellanox |
 | 10 | Bioscience computation using containerized workflows  | [slides](https://slides.com/apeltzer/deck?token=DpD3s-CV) | Alexander Peltzer | QBiC |
-| 11 | Student Cluster Competition Team Recap      | | Leonhard Reichenbach | DKRZ |
+| 11 | Student Cluster Competition Team Recap      | [slides](/data/isc2018/UniHH_SCC.pdf) | Leonhard Reichenbach | DKRZ |
 
 ## Targeted Audience
 Software developers, users, and managers of data center and cloud infrastructure and applications.
