@@ -25,23 +25,26 @@ Christian Kniep, Docker Inc.
 - Shane Canon, NERSC
 
 #### Technical Program committee
-- Abdulrahman Azab, University of Oslo & PRACE
-- Björn Grüning, University of Freiburg
-- Bob Killen, LLNL
-- Burak Yenier, UberCloud
-- CJ Newburn, NVIDIA
-- Carlos E. Arango, Sylabs
-- Giuseppa Muscianisi, CINECA
-- Hisham Kholidy, SUNY Polytechnic Institute (pending)
-- Martial Michel, Data Machines Corp.
-- Michael Jennings, LANL
-- Michael W. Bauer, Sylabs
-- Paolo Di Tommaso, Centre for Genomic Regulation (CRG) & Seqera Labs
-- Parav Pandit, Mellanox
-- Rosa M Badia, Barcelona Supercomputing Center
-- Shane Canon, NERSC
-- Thomas Röblitz, University of Oslo
-- Wolfgang Gentzsch, UberCloud
+- Abdulrahman Azab, University of Oslo, Norway & PRACE
+- Björn Grüning, University of Freiburg, Germany
+- Bob Killen, Lawrence Livermore National Laboratory (LLNL), USA
+- Burak Yenier, UberCloud, USA
+- CJ Newburn, NVIDIA, USA
+- Carlos E. Arango, Sylabs, USA
+- Carlos Fernandez, CESGA, Spain
+- Diakhate Francois, CEA, France
+- Gilles Wiber, CEA, France
+- Giuseppa Muscianisi, CINECA, Italy
+- Hisham Kholidy, SUNY Polytechnic Institute, USA
+- Martial Michel, Data Machines Corp, USA
+- Michael Jennings, Los Alamos National Lab (LANL), USA
+- Michael W. Bauer, Sylabs, USA
+- Paolo Di Tommaso, Centre for Genomic Regulation (CRG), Spain & Seqera Labs
+- Parav Pandit, Mellanox, USA
+- Rosa M Badia, Barcelona Supercomputing Center, Spain
+- Shane Canon, National Energy Research Scientific Computing Center (NERSC), USA
+- Thomas Röblitz, University of Oslo, Norway
+- Wolfgang Gentzsch, UberCloud, USA
 
 ### Call for Proposal (going to be refined)
 
@@ -61,10 +64,11 @@ We encourage submissions on innovative solutions and applications related to com
 
 Tentative dates are as follows:
 
- * Submission deadline: May 01
- * Author notification: March 30
- * Camera-ready deadline: June 19
+ * Abstract submission deadline: April 20
+ * Paper submission deadline: April 25
+ * Author notification: May 15
  * Workshop Day: June 20
+ * Camera-ready deadline: July 15
 
 #### Topics of Interest
 
