@@ -4,9 +4,6 @@ title: ISC Workshop 2019
 permalink: /isc/
 ---
 
-# ISC 2019 Workshop
-
-
 The 'Linux Container' workshop at the ISC 2019 is called: **5th Annual High Performance Container Workshop**
 
 It is going to take place as part of the International Supercomputing Conference in Frankfurt on **June 20nd from 9AM to 6PM** at the Marriott Hotel.
