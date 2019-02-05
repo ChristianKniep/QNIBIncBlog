@@ -42,6 +42,49 @@ By dissecting the different layers within the container ecosystem (runtime, supe
 The workshop will follow the concepts of the last 4 successful workshops at ISC by inviting leading members within the container industry (Mellanox, UberCloud, rCUDA, NVIDIA, Docker, Singularity/Sylabs), end-users from Bioinformatics labs, Enterprise Performance Computing and participants of the Student cluster competition.
 In addition, the workshop will solicit research papers from the broader research community, reviewed by renowned container experts within HPC/AI.
 
+##### Agenda
+
+The agenda will be structured to shed light on different aspects of containerized environment.
+Discussions are ongoing, current proposal is to structure each section as follows:
+
+* Introduction to motivate section
+* Series of lightning talks (5-10min)
+* Panel discussion including a Q&A
+
+##### Topics of Interest
+
+* Build
+   * Provisioning and building containers for HPC systems.
+   * Building portable, hardware optimized containers
+   * Pre-build images in contrast to runtime decisions on what specific system to run
+   * Security of provenance and the build process; building from “untrusted” sources
+   * rootless builds
+* Distribute
+   * How to efficiently manage images that are run across a large number of nodes, without the need of downloading the image content and creating a container file system snapshot
+   * Managing access so that users can only see their images
+   * Distribution and transport security
+* Runtime
+   * Security and isolation of containers
+   * Performance benchmarking of containerized workloads
+   * Scheduling and orchestration of containers
+   * Container runtime environments
+   * Providing a secure, easy to use RDMA networking to accelerate MPI applications
+* Platform/Orchestration
+   * Comparison of different container platforms in terms of security and performance
+   * Integration with existing HPC schedulers
+   * What does the broader container orchestration platforms  (e.g. Kubernetes and Swarm) provide for HPC?
+* Use-cases
+   * Containers in Big Data, Modeling and Simulation, Life Sciences and AI/ML applications
+   * Containerized RDMA, GPU, and MPI applications
+   * High availability systems for containerized distributed workloads
+   * Auxiliary Services tied to HPC/AI workflows
+   * IoT/Edge computing if related to HPC/AI workloads
+* Related
+   * Other topics relevant to containers in HPC
+   * The impact of containers on software development in HPC and technical computing.
+   * Monitoring (logs, events, metrics) and auditing in the area of containers
+
+
 #### General Chair
 Christian Kniep, Docker Inc.
 

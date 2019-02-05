@@ -67,8 +67,10 @@ Tentative dates are as follows:
  * Abstract submission deadline: April 20
  * Paper submission deadline: April 25
  * Author notification: May 15
+ * Conference-ready deadline: June 14<br>
  * Workshop Day: June 20
- * Camera-ready deadline: July 15
+ * Camera-ready deadline: July 15<br>
+  *The idea behind post-conference proceedings is that they give the authors the flexibility to adjust their contributions slightly based on the feedback given during the workshops*
 
 #### Topics of Interest
 
