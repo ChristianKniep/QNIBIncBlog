@@ -98,7 +98,7 @@ One has to pic the correct one carrying CUDA 9.2 (`nccl92`).
 
 {% highlight bash %}
 $ docker run --rm -ti --device /dev/nvidia0 --device /dev/nvidiactl --device /dev/nvidia-uvm \
-             qnib/cv-nccl92-tf-dev:1.12.0-rev10
+             qnib/cv-nccl92-tf-dev:1.12.0
 Using TensorFlow backend.
 Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
 successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
@@ -162,4 +162,4 @@ Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 672
 Building these images is only fun when you do not have to do it manually. So I use GoCD to compose the images.<br>
 **Even less fun**: Picking the correct image for the underlying node - if that would be easy people would have already done it two years ago...
 
-I will address both issues in the next slides later this week - so stay tuned. :)
+I will address both issues in the next slides later this week ([blog post is out](/2019/02/14/manifest-list-to-pick-optimized-images/))- so stay tuned. :)
