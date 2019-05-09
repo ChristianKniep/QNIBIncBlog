@@ -12,43 +12,26 @@ are hindering the adoption in HPC/BigData and how containers can foster
 improvements when applied to the field of HPC, Big Data and AI in the mid- and long-term.
 By dissecting the different layers within the container ecosystem (runtime, supervision, engine, orchestration, distribution, security, scalability) this workshop will provide a holistic and a state-of-the-container overview, so that participants can make informed discussions on how to start, improve or continue their container adoption.
 
+#### Important Dates
+
+Dates are as follows:
+
+ * Abstract submission deadline: April 20
+ * Paper submission deadline: April 25
+ * Author notification: May 15
+ * Conference-ready deadline: June 14<br>
+ * Workshop Day: June 20
+ * Camera-ready deadline: July 15<br>
+  *The idea behind post-conference proceedings is that they give the authors the flexibility to adjust their contributions slightly based on the feedback given during the workshops*
+
+### Call for Proposal
+
+The workshop will comprise of invited speakers and research paper slots, with the general goal to provide a holistic view of the containerized ecosystem and compare different parts within this ecosystem with regards to what the provide and spark panel discussions about highly debated topics.
+
 #### Format
 
 The workshop will follow the concepts of the last 4 successful workshops at ISC by inviting leading members within the container industry (Mellanox, UberCloud, rCUDA, NVIDIA, Docker, Singularity/Sylabs), end-users from Bioinformatics labs, Enterprise Performance Computing and participants of the Student cluster competition.
 In addition, the workshop will solicit research papers from the broader research community, reviewed by renowned container experts within HPC/AI.
-
-#### General Chair
-Christian Kniep, Docker Inc.
-
-#### Program and Publications Chairs:
-- Abdulrahman Azab, University of Oslo & PRACE
-- Shane Canon, NERSC
-
-#### Technical Program committee
-- Abdulrahman Azab, University of Oslo, Norway & PRACE
-- Björn Grüning, University of Freiburg, Germany
-- Bob Killen, Lawrence Livermore National Laboratory (LLNL), USA
-- Burak Yenier, UberCloud, USA
-- CJ Newburn, NVIDIA, USA
-- Carlos E. Arango, Sylabs, USA
-- Carlos Fernandez, CESGA, Spain
-- Diakhate Francois, CEA, France
-- Gilles Wiber, CEA, France
-- Giuseppa Muscianisi, CINECA, Italy
-- Hisham Kholidy, SUNY Polytechnic Institute, USA
-- Martial Michel, Data Machines Corp, USA
-- Michael Jennings, Los Alamos National Lab (LANL), USA
-- Michael W. Bauer, Sylabs, USA
-- Paolo Di Tommaso, Centre for Genomic Regulation (CRG), Spain & Seqera Labs
-- Parav Pandit, Mellanox, USA
-- Rosa M Badia, Barcelona Supercomputing Center, Spain
-- Shane Canon, National Energy Research Scientific Computing Center (NERSC), USA
-- Thomas Röblitz, University of Oslo, Norway
-- Wolfgang Gentzsch, UberCloud, USA
-
-### Call for Proposal (going to be refined)
-
-The workshop will comprise of invited speakers and research paper slots, with the general goal to provide a holistic view of the containerized ecosystem and compare different parts within this ecosystem with regards to what the provide and spark panel discussions about highly debated topics.
 
 ### Submission
 
@@ -60,17 +43,6 @@ Full paper submissions should be structured as technical papers (up to 7 pages +
 
 We encourage submissions on innovative solutions and applications related to commercial or industrial-strength software. At least one of the authors needs to have a non-academic affiliation. Industrial papers should be structured as extended abstracts (2-4 pages + 2 pages for references).
 
-#### Important Dates
-
-Tentative dates are as follows:
-
- * Abstract submission deadline: April 20
- * Paper submission deadline: April 25
- * Author notification: May 15
- * Conference-ready deadline: June 14<br>
- * Workshop Day: June 20
- * Camera-ready deadline: July 15<br>
-  *The idea behind post-conference proceedings is that they give the authors the flexibility to adjust their contributions slightly based on the feedback given during the workshops*
 
 #### Topics of Interest
 
@@ -105,3 +77,32 @@ Topics of interest include but are not limited to
    * Other topics relevant to containers in HPC
    * The impact of containers on software development in HPC and technical computing.
    * Monitoring (logs, events, metrics) and auditing in the area of containers
+
+#### General Chair
+Christian Kniep, Docker Inc.
+
+#### Program and Publications Chairs:
+- Abdulrahman Azab, University of Oslo & PRACE
+- Shane Canon, NERSC
+
+#### Technical Program committee
+- Abdulrahman Azab, University of Oslo, Norway & PRACE
+- Björn Grüning, University of Freiburg, Germany
+- Bob Killen, Lawrence Livermore National Laboratory (LLNL), USA
+- Burak Yenier, UberCloud, USA
+- CJ Newburn, NVIDIA, USA
+- Carlos E. Arango, Sylabs, USA
+- Carlos Fernandez, CESGA, Spain
+- Diakhate Francois, CEA, France
+- Gilles Wiber, CEA, France
+- Giuseppa Muscianisi, CINECA, Italy
+- Hisham Kholidy, SUNY Polytechnic Institute, USA
+- Martial Michel, Data Machines Corp, USA
+- Michael Jennings, Los Alamos National Lab (LANL), USA
+- Michael W. Bauer, Sylabs, USA
+- Paolo Di Tommaso, Centre for Genomic Regulation (CRG), Spain & Seqera Labs
+- Parav Pandit, Mellanox, USA
+- Rosa M Badia, Barcelona Supercomputing Center, Spain
+- Shane Canon, National Energy Research Scientific Computing Center (NERSC), USA
+- Thomas Röblitz, University of Oslo, Norway
+- Wolfgang Gentzsch, UberCloud, USA

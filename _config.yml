@@ -6,6 +6,9 @@ baseurl: ""
 url: "http://www.qnib.org"
 twitter_username: CQnib
 github_username:  ChristianKniep
+collections:
+  slots:
+    output: true
 
 # Build settings
 permalink: pretty
