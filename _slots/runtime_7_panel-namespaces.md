@@ -5,6 +5,6 @@ segment: runtime
 order_number: 7
 speakers:
 affiliation:
-title: "PANEL: Runtime hooks: Cure or curse?"
-start: ""
+title: "PANEL: How much namespaces do we need?"
+start: "10:30"
 ---

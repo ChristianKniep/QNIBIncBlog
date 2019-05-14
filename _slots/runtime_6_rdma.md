@@ -4,7 +4,7 @@ workshop: isc19
 segment: runtime
 order_number: 6
 speakers:
-affiliation:
-title: "PANEL: How much namespaces do we need?"
+affiliation: Mellanox
+title: RDMA isolation via new Kernel Feature
 start: "10:25"
 ---
