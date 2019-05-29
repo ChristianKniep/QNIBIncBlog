@@ -6,5 +6,5 @@ order_number: 3
 speakers: CJ Newburn
 affiliation: NVIDIA
 title: NVIDIAs journey with Containers
-start: "16:45"
+start: "17:00"
 ---
