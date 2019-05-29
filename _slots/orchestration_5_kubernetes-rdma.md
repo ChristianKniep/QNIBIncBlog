@@ -3,7 +3,7 @@ layout: slot
 workshop: isc19
 segment: orchestration
 order_number: 5
-speakers: Parav Pandit
+speakers: "Dror Goldenberg"
 affiliation: Mellanox
 title: Using K8s operators for containerized RDMA workloads
 start: "14:20"

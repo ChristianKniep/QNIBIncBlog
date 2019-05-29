@@ -3,7 +3,7 @@ layout: slot
 workshop: isc19
 segment: intro
 order_number: 6
-speakers: Parav
+speakers: "Dror Goldenberg"
 affiliation: Mellanox
 title: Intro Mellanox
 tags: isc19 intro
