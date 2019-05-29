@@ -3,7 +3,7 @@ layout: slot
 workshop: isc19
 segment: distribute
 order_number: 2
-speakers: ""
+speakers: "Akihiro OR Christian"
 affiliation: ""
 title: OCI Image Spec
 start: "12:25"
