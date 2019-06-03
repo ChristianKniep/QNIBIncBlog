@@ -66,10 +66,10 @@ Depending on my use-case, dicipline, vertical - what should I focus on and what 
 {% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'infra'%}| {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
 {% endif %}{% endfor %}
 
-### MPI / Distributed Workloads (15:30 - 16:00)
+### HPC Specific / Distributed Workloads (15:30 - 16:00)
 | Start |  Title                                   | Speaker             |    Company     |
 |:-----:|:-----------------------------------------|:--------------------|:--------------:|
-{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'mpi'%}| {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
+{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'hpc'%}| {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
 {% endif %}{% endfor %}
 
 ### Use-Cases/Conclusions/Discussion (16:30 - 18:00)

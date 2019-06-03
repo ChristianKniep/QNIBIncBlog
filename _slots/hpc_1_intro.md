@@ -1,7 +1,7 @@
 ---
 layout: slot
 workshop: isc19
-segment: mpi
+segment: hpc
 order_number: 1
 speakers:
 affiliation:

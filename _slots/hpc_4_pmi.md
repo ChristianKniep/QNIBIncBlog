@@ -1,10 +1,10 @@
 ---
 layout: slot
 workshop: isc19
-segment: mpi
+segment: hpc
 order_number: 4
 speakers:
 affiliation:
-title: "PMIx: Process Management Interface"
+title: "PANEL: MPI Trends (init, orchestration)"
 start: "15:50"
 ---
