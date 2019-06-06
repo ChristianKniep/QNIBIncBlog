@@ -2,9 +2,9 @@
 layout: slot
 workshop: isc19
 segment: end
-order_number: 6
+order_number: 10
 speakers:
 affiliation:
-title: "PANEL: The good, the bad, the missing"
-start: ""
+title: "PANEL: What did we miss"
+start: "17:40"
 ---

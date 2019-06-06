@@ -2,7 +2,7 @@
 layout: slot
 workshop: isc19
 segment: end
-order_number: 7
+order_number: 13
 speakers:
 affiliation:
 title: "PANEL: Bring the Glaskugel - what does a system look like in 2021?"

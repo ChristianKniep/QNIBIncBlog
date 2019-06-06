@@ -2,9 +2,9 @@
 layout: slot
 workshop: isc19
 segment: end
-order_number: 5
+order_number: 14
 speakers:
 affiliation:
-title: "PANEL: What did we miss"
-start: "17:15"
+title: "PANEL: Q&A"
+start: ""
 ---
