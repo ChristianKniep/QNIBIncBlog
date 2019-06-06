@@ -6,5 +6,5 @@ order_number: 7
 speakers:
 affiliation:
 title: "PANEL: How much namespaces do we need?"
-start: "10:30"
+start: "10:25"
 ---
