@@ -3,8 +3,8 @@ layout: slot
 workshop: isc19
 segment: orchestration
 order_number: 6
-speakers:
-affiliation:
+speakers: Daniel Gruber
+affiliation: EPFL
 title: Traditional HPC schedulers and containers (SLURM?)
 start: "14:25"
 description: "How does tradition HPC schedulers incorperate container?"
