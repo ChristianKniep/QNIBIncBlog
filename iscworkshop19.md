@@ -33,49 +33,49 @@ Depending on my use-case, dicipline, vertical - what should I focus on and what 
 
 | # | Start |  Title                                   | Speaker             |    Company     |
 |:--:|:-----:|:-----------------------------------------|:--------------------|:--------------:|
-{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'intro'%}| {% if item.start != ''%}{{ item.order_number }}{% endif %} | {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
+{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'intro' and item.hidden != 'true' %}| {% if item.start != ''%}{{ item.order_number }}{% endif %} | {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
 {% endif %}{% endfor %}
 
 ### Runtime (10:00 - 11:00)
 | Start |  Title                                   | Speaker             |    Company     |
 |:-----:|:-----------------------------------------|:--------------------|:--------------:|
-{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'runtime'%}| {% if item.start != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
+{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'runtime' and item.hidden != 'true' %}| {% if item.start != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
 {% endif %}{% endfor %}
 
 ### Build (11:30 - 12:20)
 | Start |  Title                                   | Speaker             |    Company     |
 |:-----:|:-----------------------------------------|:--------------------|:--------------:|
-{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'build'%}| {% if item.start != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
+{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'build' and item.hidden != 'true' %}| {% if item.start != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
 {% endif %}{% endfor %}
 
 ### Distribute (12:20 - 13:00)
 | Start |  Title                                   | Speaker             |    Company     |
 |:-----:|:-----------------------------------------|:--------------------|:--------------:|
-{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'distribute'%}| {% if item.start != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
+{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'distribute' and item.hidden != 'true' %}| {% if item.start != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
 {% endif %}{% endfor %}
 
 ### Orchestration/Scheduling (14:00 - 15:15)
 | Start |  Title                                   | Speaker             |    Company     |
 |:-----:|:-----------------------------------------|:--------------------|:--------------:|
-{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'orchestration'%}| {% if item.start != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
+{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'orchestration' and item.hidden != 'true' %}| {% if item.start != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
 {% endif %}{% endfor %}
 
 ### Infrastructure (15:15 - 15:30)
 | Start |  Title                                   | Speaker             |    Company     |
 |:-----:|:-----------------------------------------|:--------------------|:--------------:|
-{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'infra'%}| {% if item.start != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
+{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'infra' and item.hidden != 'true' %}| {% if item.start != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
 {% endif %}{% endfor %}
 
 ### HPC Specific / Distributed Workloads (15:30 - 16:00)
 | Start |  Title                                   | Speaker             |    Company     |
 |:-----:|:-----------------------------------------|:--------------------|:--------------:|
-{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'hpc'%}| {% if item.start != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
+{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'hpc' and item.hidden != 'true' %}| {% if item.start != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
 {% endif %}{% endfor %}
 
 ### Use-Cases/Conclusions/Discussion (16:30 - 18:00)
 | Start |  Title                                   | Speaker             |    Company     |
 |:-----:|:-----------------------------------------|:--------------------|:--------------:|
-{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'end'%}| {% if item.start != '' and item.break != 'true' %}{{ item.order_number }}{% endif %} | {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
+{% for item in ordered_slots %}{% if item.workshop == 'isc19' and item.segment == 'end' and item.hidden != 'true' %}| {% if item.start != '' and item.break != 'true' %}{{ item.order_number }}{% endif %} | {{ item.start }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
 {% endif %}{% endfor %}
 
 ## Previous ISC Workshops

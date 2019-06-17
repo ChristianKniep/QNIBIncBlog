@@ -7,4 +7,5 @@ speakers:
 affiliation:
 title: "PANEL: Q&A"
 start: "14:45"
+break: 'true'
 ---
