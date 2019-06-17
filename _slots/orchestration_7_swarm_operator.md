@@ -2,7 +2,7 @@
 layout: slot
 workshop: isc19
 segment: orchestration
-order_number: 7
+order_number: 6
 speakers: Eduardo/Michael
 affiliation: Sylabs
 title: Slurm Operator for Kubernetes

@@ -7,4 +7,5 @@ speakers:
 affiliation:
 title: "PANEL: How much namespaces do we need?"
 start: "10:25"
+break: "true"
 ---

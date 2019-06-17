@@ -2,7 +2,7 @@
 layout: slot
 workshop: isc19
 segment: orchestration
-order_number: 3
+order_number: 2
 speakers: Daniel Gruber
 affiliation: UberCloud
 title: Recap on Kubernetes

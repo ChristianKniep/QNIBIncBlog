@@ -2,7 +2,7 @@
 layout: slot
 workshop: isc19
 segment: intro
-order_number: 3
+order_number: 2
 speakers: CJ Newburn
 affiliation: NVIDIA
 title: Intro NVIDIA

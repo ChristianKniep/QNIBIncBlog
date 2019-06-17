@@ -2,7 +2,7 @@
 layout: slot
 workshop: isc19
 segment: orchestration
-order_number: 2
+order_number: 1
 speakers: Abdulrahman Azab
 affiliation: University of Oslo
 title: Simple Orchestration with SWARM

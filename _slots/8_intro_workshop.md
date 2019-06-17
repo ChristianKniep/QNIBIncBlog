@@ -2,7 +2,7 @@
 layout: slot
 workshop: isc19
 segment: intro
-order_number: 8
+order_number: 7
 speakers: Christian Kniep
 affiliation: QNIB Solutions
 title: Workshop Overview, Segments and Personas

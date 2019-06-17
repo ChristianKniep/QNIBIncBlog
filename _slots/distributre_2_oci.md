@@ -2,7 +2,7 @@
 layout: slot
 workshop: isc19
 segment: distribute
-order_number: 2
+order_number: 1
 speakers: "Akihiro Suda"
 affiliation: ""
 title: OCI Image Spec

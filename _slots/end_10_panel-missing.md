@@ -7,4 +7,5 @@ speakers:
 affiliation:
 title: "PANEL: What did we miss"
 start: "17:40"
+break: "true"
 ---

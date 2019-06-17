@@ -2,7 +2,7 @@
 layout: slot
 workshop: isc19
 segment: build
-order_number: 5
+order_number: 4
 speakers: Christian Kniep
 affiliation: QNIB Solutions
 title: Optimize for hardware again!

@@ -2,7 +2,7 @@
 layout: slot
 workshop: isc19
 segment: intro
-order_number: 7
+order_number: 6
 speakers: Valentin Rothberg
 affiliation: RedHat
 title: Intro RedHat

@@ -2,7 +2,7 @@
 layout: slot
 workshop: isc19
 segment: orchestration
-order_number: 4
+order_number: 3
 speakers: Arthur Petitpierre
 affiliation: AWS
 title: Lustre within Kubernetes
