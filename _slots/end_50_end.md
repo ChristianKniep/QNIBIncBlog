@@ -7,4 +7,6 @@ speakers:
 affiliation:
 title: "**Workshop Ending**"
 start: "18:00"
+break: "true"
+
 ---

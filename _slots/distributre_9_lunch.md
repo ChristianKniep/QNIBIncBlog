@@ -7,4 +7,5 @@ speakers: ""
 affiliation: ""
 title: "**Lunch Break**"
 start: "13:00"
+break: "true"
 ---

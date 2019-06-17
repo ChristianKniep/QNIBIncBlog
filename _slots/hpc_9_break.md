@@ -7,4 +7,5 @@ speakers:
 affiliation:
 title: "**Coffee Break**"
 start: "16:00"
+break: 'true'
 ---
