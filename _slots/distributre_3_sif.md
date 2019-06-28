@@ -7,4 +7,7 @@ speakers: Eduardo/Michael
 affiliation: Sylabs
 title: Singularity Image Format
 start: "12:30"
+yt: "https://www.youtube.com/watch?v=LijBvYrT_DE&t=414"
+slides: "3_DIST_2_SIF.pdf"
+
 ---
