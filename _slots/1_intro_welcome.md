@@ -8,4 +8,6 @@ affiliation: QNIB Solutions
 title: Welcome
 tags:
 start: "09:00"
+yt: "https://www.youtube.com/watch?v=ii2ck1eMTP"
+slides: "0_Intro_0_Welcome.pdf"
 ---

@@ -6,5 +6,7 @@ order_number: 10
 speakers:
 affiliation:
 title: "PANEL: Q&A"
-start: ""
+start: "10:10"
+yt: "https://www.youtube.com/watch?v=5mvMIT8WIbg&t=1910"
+
 ---
