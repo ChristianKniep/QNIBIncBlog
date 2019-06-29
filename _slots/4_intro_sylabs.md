@@ -3,7 +3,7 @@ layout: slot
 workshop: isc19
 segment: intro
 order_number: 3
-speakers: Eduardo/Michael
+speakers: Michael Bauer
 affiliation: Sylabs
 title: Intro Sylabs
 tags: isc19 intro

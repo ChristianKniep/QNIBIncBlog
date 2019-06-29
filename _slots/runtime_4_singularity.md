@@ -3,7 +3,7 @@ layout: slot
 workshop: isc19
 segment: runtime
 order_number: 3
-speakers: Eduardo/Michael
+speakers: Michael Bauer
 affiliation: Sylabs
 title: The Singularity runtime
 start: "10:00"

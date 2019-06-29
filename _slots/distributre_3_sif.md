@@ -3,7 +3,7 @@ layout: slot
 workshop: isc19
 segment: distribute
 order_number: 2
-speakers: Eduardo/Michael
+speakers: Michael Bauer
 affiliation: Sylabs
 title: Singularity Image Format
 start: "12:30"
