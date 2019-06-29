@@ -8,4 +8,7 @@ affiliation: Mellanox
 title: "RDMA-GPU use-case"
 start: "16:30"
 description: "Heterogeneous cluster architectures are being used for HPC, data science, scientific and ML/DL/AI and other applications. Such platforms leverage high speed, low latency and smart interconnects to work optimally. RDMA has been a de-facto networking technology along with GPUDirect to accelerates CPU to CPU, CPU to GPU and GPU to GPU communications. When such applications are containerized, it poses challenges on configuring, deploying and orchestrating the system devices. In this session, we will discuss the challenges, how to enable containerized application using GPUDirect and RDMA in a Kubernetes cluster."
+yt: "https://www.youtube.com/watch?v=b8Exxc-DEEY&t=0"
+slides: "7_END_1_MELLANOX.pdf"
+
 ---
