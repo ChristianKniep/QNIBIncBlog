@@ -28,3 +28,4 @@ At the latest non-R&D position Christian was in charge of an InfiniBand network 
 In 2013 he moved to Paris to work as an R&D Engineer in the HPC section of Bull SAS. His job (and passion) was
 to help shaping a Log and Performance Mangement solution that will withstand the node increasement introduced by the next generation of
 supercomputers. At the end of 2014 Christian moved back to Germany to persue his passions in a more unconstrained fashion.
+After working for a local-commerce StartUp he switched to Playstation Now in mid-2015 to help containerize their stacks. After two years Christian changed to work as a TAM for Docker Inc, until a recent shift to AWS to push the use of Cloud Services as a 'Senior Specialist Soulution Architect for EC2 Spot'.
