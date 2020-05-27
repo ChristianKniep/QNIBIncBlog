@@ -1,4 +1,4 @@
-FROM jekyll/jekyll AS build
+FROM jekyll/jekyll:3.8 AS build
 RUN gem install redcarpet
 WORKDIR /opt/jekyll
 COPY . .
