@@ -17,7 +17,21 @@ Instead of having one long sitting, we are going to break the workshop into thre
 * **Firstly**, a hand full experts and thought leaders will provide their insights and expertise in a short and crisp 10min lightning talk. This will fill the first half (~45min) and will be back to back, without time to do Q&A.
 * **Second** - and this is really the important and insightful part - all speakers will be available for a panel and virtual Q&A.
 
-As tools we are going to **stream the video** (not 100% settled yet but most likely twich.tv or Youtube) and use [hpc-containers.slack.com](https://hpc-containers.slack.com/#/) as the communication channel to live-chat, do polls and collect questions for the panelist and Q&A. **Plese do make sure that you add yourself to the slack channel.**
+As tools we are going to **stream the video** (not 100% settled yet but most likely twich.tv or Youtube) and use the `#hpcw20` channel within [hpc-containers.slack.com](https://hpc-containers.slack.com) ([Invitation Link if you are not registered already](https://join.slack.com/t/hpc-containers/shared_invite/zt-ak9q6jw7-UZgpv7IJua5jCtJ_db_yAQ)) for communication   (live-chat, polls and collect questions) with the panelist and Q&A. 
+**Plese do make sure that you add yourself to the slack channel.**
+
+## Time Slots
+
+**The workshop will be held as live streams on the following dates.**
+
+| Segment | Date | CEST | ET | PT |
+|:-------:|:----:|:----:|:--:|:--:|
+| Runtime | 6/16 |  5PM | 11AM | 8AM |
+| Build | 6/16 |  7PM | 13AM | 10AM |
+| Distribute | 6/17 |  5PM | 11AM | 8AM |
+| Orchestrate/Schedule | 6/17 |  7PM | 13AM | 10AM |
+| HPC Specific | 6/18 |  5PM | 11AM | 8AM |
+| Use-cases / Outlook | 6/18 |  7PM | 13AM | 10AM |
 
 ## Agenda
 
@@ -31,8 +45,8 @@ Please do come back often to check for new updates.
 
 The first segment will start building from the ground up by introducing container runtimes and why HPC did not adopt standard runtimes. Afterwards the leading project are going to present the current state of the art and conclude by discussing the area with the community.
 
-| # | Duration |  Title                                   | Speaker             |    Company     | Links |
-|:-:|:-----:|:-----------------------------------------|:--------------------|:--------------:|:-----:|
+| # | Duration |  Title                                   | Speaker             |    Company     |
+|:-:|:-----:|:-----------------------------------------|:--------------------|:--------------:|
 {% for item in ordered_slots %}{% if item.workshop == 'isc20' and item.segment == 'runtime' and item.hidden != 'true' %}| {% if item.duration != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.duration }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} | {% if item.yt %}[Video]({{item.yt}}){% endif %}{% if item.slides and item.yt %}/{% endif %}{% if item.slides %}[Slides](/data/hpcw19/{{item.slides}}){% endif %} |
 {% endif %}{% endfor %}
 
@@ -42,9 +56,9 @@ The first segment will start building from the ground up by introducing containe
 This segment will focus on the building of images as an artifact, how recepies look like and what the end-user might worry about when defining the artifact.
 
 
-| # | Duration |  Title                                   | Speaker             |    Company     | Links |
-|:-:|:-----:|:-----------------------------------------|:--------------------|:--------------:|:-----:|
-{% for item in ordered_slots %}{% if item.workshop == 'isc20' and item.segment == 'build' and item.hidden != 'true' %}| {% if item.duration != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.duration }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} | {% if item.yt %}[Video]({{item.yt}}){% endif %}{% if item.slides and item.yt %}/{% endif %}{% if item.slides %}[Slides](/data/hpcw19/{{item.slides}}){% endif %} |
+| # | Duration |  Title                                   | Speaker             |    Company     |
+|:-:|:-----:|:-----------------------------------------|:--------------------|:--------------:|
+{% for item in ordered_slots %}{% if item.workshop == 'isc20' and item.segment == 'build' and item.hidden != 'true' %}| {% if item.duration != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.duration }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
 {% endif %}{% endfor %}
 
 #### Distribute 
@@ -53,9 +67,9 @@ This segment will focus on the building of images as an artifact, how recepies l
 
 Once an image is build it needs to be distributed - this segment will focus on how that can be done in a scalable and secure manner.
 
-| # | Duration |  Title                                   | Speaker             |    Company     | Links |
-|:-:|:-----:|:-----------------------------------------|:--------------------|:--------------:|:-----:|
-{% for item in ordered_slots %}{% if item.workshop == 'isc20' and item.segment == 'dist' and item.hidden != 'true' %}| {% if item.duration != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.duration }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} | {% if item.yt %}[Video]({{item.yt}}){% endif %}{% if item.slides and item.yt %}/{% endif %}{% if item.slides %}[Slides](/data/hpcw19/{{item.slides}}){% endif %} |
+| # | Duration |  Title                                   | Speaker             |    Company     |
+|:-:|:-----:|:-----------------------------------------|:--------------------|:--------------:|
+{% for item in ordered_slots %}{% if item.workshop == 'isc20' and item.segment == 'dist' and item.hidden != 'true' %}| {% if item.duration != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.duration }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
 {% endif %}{% endfor %}
 
 #### Orchestration/Scheduling 
@@ -64,11 +78,22 @@ Once an image is build it needs to be distributed - this segment will focus on h
 
 Starting with a simple scheduler like SLURM this segment will build up to more complex schedulers (K8s) and workflow managers (Nextflow, Argo, Airflow).
 
+| # | Duration |  Title                                   | Speaker             |    Company     |
+|:-:|:-----:|:-----------------------------------------|:--------------------|:--------------:|
+{% for item in ordered_slots %}{% if item.workshop == 'isc20' and item.segment == 'orchestrate' and item.hidden != 'true' %}| {% if item.duration != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.duration }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
+{% endif %}{% endfor %}
+
+
 #### HPC Specific 
 
 **Scheduled for:** (6/18 - 5PM CEST)
 
 Approaching the meet on the bone we are going to discuss the particularities of HPC. Device integration, POSIX file-systems, MPI(/PMI) and scale in general.
+
+| # | Duration |  Title                                   | Speaker             |    Company     |
+|:-:|:-----:|:-----------------------------------------|:--------------------|:--------------:|
+{% for item in ordered_slots %}{% if item.workshop == 'isc20' and item.segment == 'hpc' and item.hidden != 'true' %}| {% if item.duration != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.duration }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
+{% endif %}{% endfor %}
 
 #### Use-cases and Outlook
 
@@ -76,9 +101,12 @@ Approaching the meet on the bone we are going to discuss the particularities of 
 
 We'll look back on 6 years of this workshop, get a glimps into how big centers run containers successfully and how HPC use-cases evolved.
 
+| # | Duration |  Title                                   | Speaker             |    Company     |
+|:-:|:-----:|:-----------------------------------------|:--------------------|:--------------:|
+{% for item in ordered_slots %}{% if item.workshop == 'isc20' and item.segment == 'outlook' and item.hidden != 'true' %}| {% if item.duration != '' and item.break != 'true'%}{{ item.order_number }}{% endif %} | {{ item.duration }} | {% if item.description %}<details><summary>{% endif %}{{ item.title }}{% if item.description %}</summary><div class="slot-tiny">{{ item.description }}</div></details>{% endif %} | {{ item.speakers }}  | {{ item.affiliation }} |
+{% endif %}{% endfor %}
 
 ## Previous Workshops
-
 
 <ul class="posts">
 {% for post in site.posts %}
