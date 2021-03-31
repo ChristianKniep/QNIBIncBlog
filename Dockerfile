@@ -1,4 +1,5 @@
 FROM jekyll/jekyll:3.8 AS build
+RUN apk add rsync
 RUN gem install redcarpet
 WORKDIR /opt/jekyll
 COPY . .
