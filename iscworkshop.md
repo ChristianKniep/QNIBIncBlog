@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ISC HPCW
-permalink: /isc/
+permalink: /isc/index.html
 ---
 
 The **H**igh **P**erformance **C**ontainer **W**orkshop series assembles thought leaders to provide the 'state of containers' and the latest trends.

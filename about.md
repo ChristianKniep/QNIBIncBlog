@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /about/index.html
 ---
 
 ### ... QNIB Solutions

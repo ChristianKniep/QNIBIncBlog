@@ -11,7 +11,8 @@ collections:
     output: true
 
 # Build settings
-permalink: pretty
+#permalink: pretty
+permalink: /:categories/:year/:month/:day/:title/index.html
 
 markdown: redcarpet
 redcarpet:

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Insert Buzzword
-permalink: /insert-buzzword/
+permalink: /insert-buzzword/index.html
 ---
 
 ## Podcast

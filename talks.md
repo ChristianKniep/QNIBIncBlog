@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Talks
-permalink: /talks/
+permalink: /talks/index.html
 ---
 <ul class="posts">
     {% for post in site.posts %}
