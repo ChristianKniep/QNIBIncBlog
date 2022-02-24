@@ -1,6 +1,7 @@
 FROM jekyll/jekyll:3.8 AS build
 RUN apk add rsync
-RUN gem install redcarpet
+RUN gem install redcarpet \
+ && gem install jekyll-redirect-from
 WORKDIR /opt/jekyll
 COPY . .
 USER root

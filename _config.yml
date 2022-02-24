@@ -3,12 +3,14 @@ title: QNIB Solutions
 email: christian@qnib.org
 description: "All things IT to enhance the usage of infrastructure and software stacks."
 baseurl: ""
-url: "http://www.qnib.org"
+url: "https://www.qnib.org"
 twitter_username: CQnib
 github_username:  ChristianKniep
 collections:
   slots:
     output: true
+plugins:
+  - jekyll-redirect-from
 
 # Build settings
 #permalink: pretty
@@ -17,3 +19,13 @@ permalink: /:categories/:year/:month/:day/:title/index.html
 markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "strikethrough", "superscript", "with_toc_data"]
+
+Navigation:
+- title: QNIBLog
+  url: /index.html
+- title: ISC Container Workshop
+  url: https://container-in-hpc.github.io/isc/
+- title: Insert Buzzword
+  url: /insert-buzzword/index.html
+- title: About
+  url: /about/index.html

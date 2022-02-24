@@ -2,6 +2,7 @@
 layout: page
 title: ISC HPCW
 permalink: /isc/index.html
+redirect_to: https://container-in-hpc.github.io/isc/
 ---
 
 The **H**igh **P**erformance **C**ontainer **W**orkshop series assembles thought leaders to provide the 'state of containers' and the latest trends.
